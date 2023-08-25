@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   description: "Portfolio for a passionate full stack software developer 👨‍💻. Based in Malta 🇲🇹."
 }
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>

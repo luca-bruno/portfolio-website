@@ -11,6 +11,7 @@ const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({ currentSlide, setCu
 
     const isOnFirstPage = currentSlide === 0
     const isOnLastPage = currentSlide === (images && images.length - 1)
+    const hasMoreThanOneImage = images && (images.length > 1)
 
     return (
         <div className={`slide_show_container ${isMobileView ? "mobile" : ""}`}>
@@ -26,7 +27,18 @@ const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({ currentSlide, setCu
                 <Image draggable="false" alt="card" width={425} height={844} src={trivya1mobile} />
             }
 
-            <SlideShowPreviewButtons {...{ setCurrentSlide, setFullscreenMode, setIsArrowHovered, isArrowHovered, isOnFirstPage, isOnLastPage }} />
+            {hasMoreThanOneImage &&
+                <SlideShowPreviewButtons
+                    {...{
+                        setCurrentSlide,
+                        setFullscreenMode,
+                        setIsArrowHovered,
+                        isArrowHovered,
+                        isOnFirstPage,
+                        isOnLastPage
+                    }}
+                />
+            }
         </div>
     )
 }

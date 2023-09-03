@@ -239,7 +239,7 @@ label:active:after {
     width: 100%;
     top: 15px;
     z-index: 100;
-    left: 2rem;
+    right: 2rem;
     transition: 0.3s;
     font-size: x-large;
 }
@@ -249,7 +249,7 @@ label:active:after {
     width: 100%;
     top: 15px;
     z-index: 100;
-    right: 2rem;
+    left: 2rem;
     transition: 0.3s;
     font-size: x-large;
 }

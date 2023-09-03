@@ -5,8 +5,9 @@ import "@/styles/SlideShowPreview.css"
 import { faUpRightAndDownLeftFromCenter, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { defaultImage } from "../Cards/data"
+import SlideShowPreviewTypes from "./types/SlideShowPreview.interface"
 
-const SlideShowPreview = ({ currentSlide, setCurrentSlide, setFullscreenMode, isMobileView, images }) => {
+const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({ currentSlide, setCurrentSlide, setFullscreenMode, isMobileView, images }) => {
     const [isArrowHovered, setIsArrowHovered] = useState(false)
 
     const isOnFirstPage = currentSlide === 0

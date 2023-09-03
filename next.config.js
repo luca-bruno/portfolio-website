@@ -2,6 +2,9 @@
 const nextConfig = {
   eslint: {
     dirs: ["src"]
+  },
+  images: {
+    domains: ["highlandcanine.com", "i0.wp.com"]
   }
 }
 

@@ -1,0 +1,28 @@
+.sidepanel_slideshow_buttons {
+    text-align: center;
+    font-size: x-small;  
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.sidepanel_slideshow_button_icon {
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.sidepanel_slideshow_button_icon:hover {
+    color: var(--global--color-primary);
+}
+
+.sidepanel_slideshow_button_icon_active {
+    color: var(--global--color-primary);
+}
+
+.sidepanel_slideshow_button_icon_hide {
+    opacity: 0;
+}

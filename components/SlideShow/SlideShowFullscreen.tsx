@@ -1,6 +1,8 @@
 import { faX } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
+import "@/styles/SlideShowFullscreen.css"
+import "@/styles/SidePanel.css"
 import SlideShowFullscreenTypes from "./types/SlideShowFullscreen.interface"
 
 const SlideShowFullscreen: React.FC<SlideShowFullscreenTypes> = ({ setFullscreenMode }) => (

@@ -1,6 +1,7 @@
 import React from "react"
 import { faUpRightAndDownLeftFromCenter, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "@/styles/SlideShowPreviewButtons.css"
 import SlideShowPreviewButtonsTypes from "./types/SlideShowPreviewButtons.interface"
 
 const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({

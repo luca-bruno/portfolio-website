@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "@/styles/SlideShow.css"
+import "@/styles/SlideShowViewToggle.css"
 import React from "react"
 import { SlideShowViewToggleTypes } from "./types/SlideShow.interface"
 

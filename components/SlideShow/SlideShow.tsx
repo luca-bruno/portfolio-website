@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import "@/styles/SlideShow.css"
 import { SlideShowTypes } from "./types/SlideShow.interface"
 import SlideShowViewToggle from "./SlideShowViewToggle"
 import SlideShowPreview from "./SlideShowPreview"

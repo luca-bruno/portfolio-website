@@ -20,6 +20,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({ isSidePanelOpen, setIsSidePanelOp
   }
 
   return (
+    // TODO: split components
     <div className={`sidepanel ${isSidePanelOpen ? "open" : "closed"}`}>
 
       <button type="button" className="sidepanel_close_button" onClick={() => { setIsSidePanelOpen(false); setActiveCard(undefined) }}>

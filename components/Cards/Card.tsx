@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import "@/styles/Card.css"
 import { defaultImage } from "./data"
 import { CardTypes } from "./types/Cards.interface"
 

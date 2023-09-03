@@ -1,5 +1,7 @@
+import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
+
 interface SlideShowTypes {
-    images?: string[]
+    images?: ProjectTypes["images"]
 }
 
 interface SlideShowViewToggleTypes {

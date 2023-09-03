@@ -1,9 +1,11 @@
+import { SlideShowTypes, SlideShowViewToggleTypes } from "./SlideShow.interface"
+
 interface SlideShowPreviewTypes {
     currentSlide: number
-    setCurrentSlide: (arg0: number) => void
+    setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
     setFullscreenMode: (arg0: boolean) => void
-    isMobileView: boolean
-    images: string[]
+    isMobileView: SlideShowViewToggleTypes["isMobileView"]
+    images: SlideShowTypes["images"]
 }
 
 export default SlideShowPreviewTypes

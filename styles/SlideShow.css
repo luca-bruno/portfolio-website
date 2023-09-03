@@ -1,0 +1,256 @@
+.sidepanel_slideshow {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    filter: none;
+    transition: filter 0.2s ease-in-out;
+}
+
+.mobile {
+    aspect-ratio: 9 / 18;
+    max-height: 50vh;
+}
+
+.sidepanel_slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.2s ease-in-out;
+}
+
+.sidepanel_slideshow:hover {
+    cursor: pointer;
+}
+
+.sidepanel_slideshow:hover .slide_hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.sidepanel_slideshow:hover .slide_no_hover {
+    cursor: pointer;
+    filter: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay_center {
+    left: 0;
+    width: 75%;
+    margin: auto;
+}
+
+.overlay_placeholder {
+    color: red;
+
+}
+
+.overlay_left {
+    left: 0;
+    width: 12.5%;
+    margin: auto;
+    margin-left: 0;
+}
+
+.overlay_right {
+    width: 12.5%;
+    right: 0;
+}
+
+.overlay_disabled {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.overlay_hovered {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidepanel_slideshow:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+    transition: opacity 0.2s ease-in-out;
+
+}
+
+.overlay_hidden {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.overlay_left:hover, .overlay_right:hover {
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+
+.icon {
+    opacity: 70%;
+    transition: transform 0.3s ease-in-out;
+    animation: squeeze 2s ease-in-out infinite;
+}
+
+.icon_expand {
+    font-size: 10rem;
+}
+
+.icon_arrow {
+    font-size: 5rem;
+    filter: drop-shadow(0px 5px 0px rgba(128, 128, 128, 0.4));
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes squeeze {
+    0%, 100% {
+        transform: scale(1.1);
+        transform-origin: center center;
+    }
+    50% {
+        transform: scale(1.0);
+        transform-origin: center center;
+    }
+}
+
+
+.sidepanel_slideshow_buttons {
+    text-align: center;
+    font-size: x-small;  
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.sidepanel_slideshow_button_icon {
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.sidepanel_slideshow_button_icon:hover {
+    color: var(--global--color-primary);
+}
+
+.sidepanel_slideshow_button_icon_hide {
+    opacity: 0;
+}
+
+.sidepanel_slideshow_button_icon_active {
+    color: var(--global--color-primary);
+}
+
+iframe {
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* padding: 5rem; */
+    z-index: 10;
+}
+
+.fullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 1rem 0 0 1.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.sidepanel_slideshow_view_toggle {
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+label {
+    width: 30%;
+    height: 3rem; 
+    position: relative;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: var(--global--border-radius);
+    box-shadow: inset 0px 5px 15px black, inset 0px -5px 15px gray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label:after {
+    content: "";
+    width: 50%;
+    height: 3rem;
+    position: absolute;
+    border-radius: var(--global--border-radius);
+    box-shadow: 0px 5px 10px black;
+    transition: 0.3s;
+    background-color: var(--global--color-primary);
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label {
+    background-color: rgb(128, 128, 128, 0.3);
+}
+
+input:checked + label:after {
+    transform: translateX(+100%);
+    background-color: var(--global--color-primary);
+}
+
+label:active:after {
+    width: 52%;
+}
+
+.desktop {
+    position: absolute;
+    width: 100%;
+    top: 15px;
+    z-index: 100;
+    left: 2rem;
+    transition: 0.3s;
+    font-size: x-large;
+}
+
+.mobile {
+    position: absolute;
+    width: 100%;
+    top: 15px;
+    z-index: 100;
+    right: 2rem;
+    transition: 0.3s;
+    font-size: x-large;
+}

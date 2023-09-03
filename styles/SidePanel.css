@@ -1,0 +1,136 @@
+.sidepanel {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+}
+
+.open {
+    width: 35%;
+}
+
+.closed {
+    width: 0;
+}
+
+.sidepanel_close_button {
+    width: 0;
+}
+
+.sidepanel_close_button_icon {
+    user-select: none;
+    float: left;
+    border: none;
+    font-size: xx-large;
+    margin: 1rem 1rem 1rem 1.5rem;
+    transition: color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.sidepanel_close_button_icon:hover {
+    color: var(--global--color-primary);
+}
+
+.sidepanel_content {
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.sidepanel_info {
+    color: var(--global--color-primary);
+}
+
+.sidepanel_title {
+    margin-top: 0.5rem;
+    font-size: xx-large;
+}
+
+.sidepanel_description {
+    margin-top: 2rem;
+}
+
+.sidepanel_title, .sidepanel_description {
+    margin-bottom: 1rem;
+}
+
+.sidepanel_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidepanel_button {
+    background-color: rgb(128, 128, 128, 0.1);
+    padding: 10px;
+    font-size: large;
+    border-radius: var(--global--border-radius);
+    transition: 
+        background-color .2s ease-in-out,
+        color .2s ease-in-out;
+}
+
+.sidepanel_button:hover {
+    background-color: rgb(128, 128, 128, 0.3);
+    color: var(--global--color-primary);
+}
+
+.sidepanel_button_icon {
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.sidepanel_stack {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgb(128, 128, 128, 0.3);
+    border-radius: var(--global--border-radius);
+    filter: grayscale(70%);
+    transition: 
+        filter .2s ease-in-out;
+}
+
+.sidepanel_stack:hover {
+    filter: grayscale(0%);
+}
+
+.sidepanel_stack_title {
+    text-align: left;
+    padding: 1rem;
+}
+
+.sidepanel_stack_item_icon {
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    animation: bubble 4s ease-in-out infinite;
+}
+
+.sidepanel_stack_item_icon:hover {
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+.sidepanel_stack_item_icon:not(:hover) {
+    animation: bubble 4s ease-in-out infinite;
+}
+
+@keyframes bubble {
+    0%, 100% {
+        transform: translateY(-2px) scale(1.0);
+        transform-origin: center center;
+    }
+    50% {
+        transform: translateY(2px) scale(1.0);
+        transform-origin: center center;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}

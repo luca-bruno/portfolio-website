@@ -2,6 +2,7 @@
 
 import Cards from "@/components/Cards/Cards"
 import { arr } from "@/components/Cards/data"
+import SidePanel from "@/components/SidePanel/SidePanel"
 import { useEffect, useState } from "react"
 import ProjectTypes from "../api/[types]/ProjectTypes.interface"
 
@@ -24,6 +25,14 @@ const page = () => {
           activeCard,
           arr,
           setActiveCardDetails
+        }}
+      />
+      <SidePanel
+        {...{
+          isSidePanelOpen,
+          setIsSidePanelOpen,
+          setActiveCard,
+          activeCardDetails
         }}
       />
     </div>

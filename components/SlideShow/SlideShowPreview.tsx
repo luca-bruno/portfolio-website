@@ -30,7 +30,7 @@ const SlideShowPreview = ({ currentSlide, setCurrentSlide, setFullscreenMode, is
             {/* TODO: <SlideShowPreviewButtons (?) /> */}
 
 
-            <div className={`${isArrowHovered ? "overlay_center_container2" : "overlay_center_container"}`}>
+            <div className={`${isArrowHovered ? "overlay_center_container_hidden" : "overlay_center_container"}`}>
                 <button
                     type="button"
                     className="overlay_center"

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "@/styles/SlideShow.css"
@@ -8,7 +9,6 @@ const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({ setIsMobileVi
     // TODO: make a generic toggle - props are onChange method, checked cond, icon1 and icon2
     <div className="sidepanel_slideshow_view_toggle">
         <input type="checkbox" id="darkmode-toggle" checked={isMobileView} onChange={() => setIsMobileView(prev => !prev)} />
-        {/* TODO: fix this issue, possibly reorder of styling needed */}
         <label htmlFor="darkmode-toggle">
             <FontAwesomeIcon icon={faDesktop} className="desktop" />
             <FontAwesomeIcon icon={faMobile} className="mobile" />

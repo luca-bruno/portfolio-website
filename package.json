@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix": "next lint --fix"
+    "lintfix": "next lint --fix",
+    "formatfix": "prettier --write --ignore-path .gitignore app/ components/ hooks/ models/ styles/ utils/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -37,6 +38,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^9.0.0"
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3"
   }
 }

@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run TypeScript compiler
+yarn tsc
+
+# Run linter
+yarn lint
+
+# If either linting command fails, prevent the commit
+if [ $? -ne 0 ]; then
+    echo "Type/linting issues found. Please fix the issues before committing."
+    exit 1
+fi

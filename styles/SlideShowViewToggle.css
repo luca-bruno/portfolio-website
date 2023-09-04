@@ -37,7 +37,7 @@ input {
 }
 
 input:checked + label {
-  background-color: rgb(128, 128, 128, 0.3);
+  background-color: var(--global--color-secondary);
 }
 
 input:checked + label:after {

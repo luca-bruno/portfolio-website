@@ -73,7 +73,7 @@
 }
 
 .sidepanel_button:hover {
-  background-color: rgb(128, 128, 128, 0.3);
+  background-color: var(--global--color-secondary);
   color: var(--global--color-primary);
 }
 
@@ -87,7 +87,7 @@
 .sidepanel_stack {
   text-align: center;
   margin-top: 1rem;
-  background-color: rgb(128, 128, 128, 0.3);
+  background-color: var(--global--color-secondary);
   border-radius: var(--global--border-radius);
   filter: grayscale(70%);
   transition: filter 0.2s ease-in-out;
@@ -115,25 +115,4 @@
 
 .sidepanel_stack_item_icon:not(:hover) {
   animation: bubble 4s ease-in-out infinite;
-}
-
-@keyframes bubble {
-  0%,
-  100% {
-    transform: translateY(-2px) scale(1);
-    transform-origin: center center;
-  }
-  50% {
-    transform: translateY(2px) scale(1);
-    transform-origin: center center;
-  }
-}
-
-@keyframes scaleUp {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
 }

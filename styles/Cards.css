@@ -5,6 +5,5 @@
   grid-template-columns: repeat(auto-fit, minmax(455px, 455px));
   grid-auto-rows: minmax(250px, auto);
   gap: 30px;
-  margin-left: 30px;
-  margin-right: 10px;
+  padding: 5px 10px 0px 30px;
 }

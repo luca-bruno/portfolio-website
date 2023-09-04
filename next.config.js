@@ -4,7 +4,7 @@ const nextConfig = {
     dirs: ["src"]
   },
   images: {
-    domains: ["highlandcanine.com", "i0.wp.com"]
+    domains: ["highlandcanine.com", "i0.wp.com", "media.licdn.com"]
   }
 }
 

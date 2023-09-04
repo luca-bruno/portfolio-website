@@ -1,9 +1,9 @@
 .work_timeline {
   width: 100%;
-  height: 50%;
+  height: calc(100vh - 64px);
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(2, minmax(455px, 455px));
+  grid-template-columns: repeat(2, minmax(50%, 50%));
   grid-auto-rows: minmax(250px, auto);
   gap: 30px;
   margin-left: 30px;
@@ -16,8 +16,10 @@
 
 .timeline {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 1rem;
-  background-color: red;
 }
 
 .profile {
@@ -34,13 +36,20 @@
   border-radius: var(--global--border-radius);
 }
 
+.timeline_dot {
+    display: flex;
+    align-items: "center" 
+}
+
+
 /* replace */
 .dot {
-  width: 100%;
-  text-align: center;
+  width: 10rem;
+  height: 10rem;
+  /* text-align: left; */
   user-select: none;
   border: none;
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0 5rem 0 5rem;
   transition: color 0.2s ease-in-out;
 }
 
@@ -48,4 +57,34 @@
   border-radius: 100%;
   width: 300px;
   height: 300px;
+}
+
+.timeline_step {
+    border-radius: var(--global--border-radius);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* margin: 10rem 0 10rem 0; */
+    padding: 1rem;
+    animation: bubble 4s ease-in-out infinite;
+}
+
+.timeline_separator {
+    /* padding: 1.5rem 0 1.5rem 0; */
+    user-select: none;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 10px;
+    height: 230px;
+    border-radius: var(--global--border-radius);
+    filter: blur(1px);
+}
+
+.timeline_info {
+    width: 100%;
+    background-color: rgb(128, 128, 128, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--global--border-radius);
 }

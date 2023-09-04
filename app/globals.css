@@ -132,3 +132,17 @@ button {
     transform: scale(1.2);
   }
 }
+
+@keyframes fadeAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

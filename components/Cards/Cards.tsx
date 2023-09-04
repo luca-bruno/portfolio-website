@@ -14,7 +14,7 @@ const Cards: React.FC<CardsTypes> = ({
   const selectCard = (id: string) => {
     setActiveCard(id)
     setIsSidePanelOpen(true)
-    setActiveCardDetails(arr.filter(el => activeCard === el.id)[0])
+    setActiveCardDetails(arr.filter((el) => activeCard === el.id)[0])
 
     if (id === activeCard) {
       setIsSidePanelOpen(false)

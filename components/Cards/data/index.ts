@@ -43,6 +43,7 @@ const arr: ProjectTypes[] = [
   }
 ]
 
-const defaultImage = "https://highlandcanine.com/wp-content/uploads/2021/01/vizsla-running.jpg"
+const defaultImage =
+  "https://highlandcanine.com/wp-content/uploads/2021/01/vizsla-running.jpg"
 
 export { arr, defaultImage }

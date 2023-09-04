@@ -1,10 +1,10 @@
 .cards_grid {
-    width: 75%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(455px, 455px));
-    grid-auto-rows: minmax(250px, auto); 
-    gap: 30px; 
-    margin-left: 30px; 
-    margin-right: 10px;
+  width: 75%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(455px, 455px));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 30px;
+  margin-left: 30px;
+  margin-right: 10px;
 }

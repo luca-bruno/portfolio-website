@@ -12,7 +12,15 @@ const SlideShow: React.FC<SlideShowTypes> = ({ images }) => {
 
   return (
     <>
-      <SlideShowPreview {...{ currentSlide, setCurrentSlide, setFullscreenMode, isMobileView, images }} />
+      <SlideShowPreview
+        {...{
+          currentSlide,
+          setCurrentSlide,
+          setFullscreenMode,
+          isMobileView,
+          images
+        }}
+      />
 
       <SlideShowPageDots {...{ images, currentSlide, setCurrentSlide }} />
       <SlideShowViewToggle {...{ isMobileView, setIsMobileView }} />

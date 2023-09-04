@@ -5,15 +5,23 @@ import "@/styles/SlideShowViewToggle.css"
 import React from "react"
 import { SlideShowViewToggleTypes } from "./types/SlideShow.interface"
 
-const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({ setIsMobileView, isMobileView }) => (
-    // TODO: make a generic toggle - props are onChange method, checked cond, icon1 and icon2
-    <div className="sidepanel_slideshow_view_toggle">
-        <input type="checkbox" id="darkmode-toggle" checked={isMobileView} onChange={() => setIsMobileView(prev => !prev)} />
-        <label htmlFor="darkmode-toggle">
-            <FontAwesomeIcon icon={faDesktop} className="desktop" />
-            <FontAwesomeIcon icon={faMobile} className="mobile" />
-        </label>
-    </div>
+const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({
+  setIsMobileView,
+  isMobileView
+}) => (
+  // TODO: make a generic toggle - props are onChange method, checked cond, icon1 and icon2
+  <div className="sidepanel_slideshow_view_toggle">
+    <input
+      type="checkbox"
+      id="darkmode-toggle"
+      checked={isMobileView}
+      onChange={() => setIsMobileView((prev) => !prev)}
+    />
+    <label htmlFor="darkmode-toggle">
+      <FontAwesomeIcon icon={faDesktop} className="desktop" />
+      <FontAwesomeIcon icon={faMobile} className="mobile" />
+    </label>
+  </div>
 )
 
 export default SlideShowViewToggle

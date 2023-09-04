@@ -1,36 +1,41 @@
 .header {
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header_name {
-    justify-content: start;
-    align-items: center;
-    margin: auto 1rem auto 1rem;
-    color: white;
-    font-size: x-large;
-    transition: color .2s ease-in-out, color .2s ease-in-out;
+  justify-content: start;
+  align-items: center;
+  margin: auto 1rem auto 1rem;
+  color: white;
+  font-size: x-large;
+  transition:
+    color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .header_buttons {
-    display: flex;
-    margin: auto 0 auto 0;
-    align-items: center;
-    height: min-content;
+  display: flex;
+  margin: auto 0 auto 0;
+  align-items: center;
+  height: min-content;
 }
 
 .header_buttons_button {
-    color: white;
-    font-size: x-large;
-    margin: 0rem 2rem 0rem 2rem;
-    transition: color .2s ease-in-out, color .2s ease-in-out;
+  color: white;
+  font-size: x-large;
+  margin: 0rem 2rem 0rem 2rem;
+  transition:
+    color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
-.header_name:hover, .header_buttons_button:hover {
-    color: var(--global--color-primary);
+.header_name:hover,
+.header_buttons_button:hover {
+  color: var(--global--color-primary);
 }
 
 .header_buttons_button_active {
-    color: var(--global--color-primary);
+  color: var(--global--color-primary);
 }

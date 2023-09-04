@@ -12,7 +12,7 @@ const page = () => {
   const [activeCardDetails, setActiveCardDetails] = useState<ProjectTypes>()
 
   useEffect(() => {
-    setActiveCardDetails(arr.filter(el => activeCard === el.id)[0])
+    setActiveCardDetails(arr.filter((el) => activeCard === el.id)[0])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCard])
 

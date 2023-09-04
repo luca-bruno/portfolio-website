@@ -1,7 +1,7 @@
 import SlideShowPreviewTypes from "./SlideShowPreview.interface"
 
 interface SlideShowFullscreenTypes {
-    setFullscreenMode: SlideShowPreviewTypes["setFullscreenMode"]
+  setFullscreenMode: SlideShowPreviewTypes["setFullscreenMode"]
 }
 
 export default SlideShowFullscreenTypes

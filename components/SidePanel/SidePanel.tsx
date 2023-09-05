@@ -27,7 +27,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({
   return (
     // TODO: split components
     <>
-      {isSidePanelOpen &&
+      {isSidePanelOpen && (
         <div>
           <button
             type="button"
@@ -43,7 +43,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({
             />
           </button>
         </div>
-      }
+      )}
 
       <div className={`sidepanel ${isSidePanelOpen ? "open" : "closed"}`}>
         {isSidePanelOpen && activeCardDetails && (

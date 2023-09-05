@@ -153,7 +153,7 @@
 
 .timeline_separator_grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(48%, 50%));
+  grid-template-columns: repeat(3, minmax(35%, 50%));
   grid-auto-rows: minmax(100px, auto);
   gap: 30px;
 }
@@ -167,10 +167,9 @@
   font-size: xx-large;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.1);
-  width: 10px;
+  width: 7px;
   height: 230px;
   border-radius: var(--global--border-radius);
-  filter: blur(1px);
 }
 
 .timeline_info {

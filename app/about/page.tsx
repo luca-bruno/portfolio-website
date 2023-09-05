@@ -77,22 +77,24 @@ const page = () => {
 
   const isCurrentlyActiveWork = (workId: string) => activeWork === workId
 
+  const reset = () => {
+    setIsWorkSelected(false)
+    setActiveWork(undefined)
+    setActiveWorkDetails(undefined)
+  }
+
   const selectWork = (id: string) => {
     setActiveWork(id)
     setIsWorkSelected(true)
-    setActiveWorkDetails(arr.filter((el) => activeWork === el.id)[0])
+    setActiveWorkDetails(arr.filter(el => activeWork === el.id)[0])
 
     if (id === activeWork) {
-      setIsWorkSelected(false)
-      setActiveWork(undefined)
-      setActiveWorkDetails(undefined)
+      reset()
     }
   }
 
-
-
   useEffect(() => {
-    setActiveWorkDetails(arr.filter((el) => activeWork === el.id)[0])
+    setActiveWorkDetails(arr.filter(el => activeWork === el.id)[0])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeWork])
 
@@ -161,7 +163,7 @@ const page = () => {
         )}
       </div>
 
-      <div>
+      <div style={{ display: "flex", flexDirection: "column", margin: "auto" }}>
         <div
           onMouseEnter={() => setIsProfileHovered(true)}
           onMouseLeave={() => setIsProfileHovered(false)}
@@ -185,7 +187,7 @@ const page = () => {
                 <button
                   id="profile_description_extender_container"
                   type="button"
-                  onClick={() => setIsWorkSelected((prev) => !prev)}
+                  onClick={() => reset()}
                 >
                   <p
                     className={`${isProfileHovered ? "" : ""} profile_description_extender`}
@@ -266,7 +268,7 @@ const page = () => {
           </div>
         )}
       </div>
-    </div>
+    </div >
   )
 }
 

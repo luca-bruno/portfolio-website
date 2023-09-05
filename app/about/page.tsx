@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react"
 import moment from "moment"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import ProfilePicture from "@/public/assets/ProfilePicture.png"
+import Link from "next/link"
 
 const page = () => {
   const arr = [
@@ -163,7 +164,7 @@ const page = () => {
         )}
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", margin: "auto" }}>
+      <div style={{ display: "flex", flexDirection: "column", margin: "auto", marginTop: "5.4rem" }}>
         <div
           onMouseEnter={() => setIsProfileHovered(true)}
           onMouseLeave={() => setIsProfileHovered(false)}
@@ -200,9 +201,9 @@ const page = () => {
             <br />
             <div className={`${isWorkSelected ? "hidden" : ""}`}>
               <p>
-                I am primarily proficient in the React Framework and its
+                I am primarily proficient in the React framework and its
                 ecosystem (Redux, RTK Query, Vite, etc.), as well as TypeScript,
-                UX/UI, HTML and CSS (Tailwind, LESS, Headless UI). Experienced
+                UX/UI, HTML and CSS (Tailwind, LESS, HeadlessUI). Experienced
                 in functional back-end programming (Elixir, Phoenix, Ecto DSL,
                 PostgreSQL) and knowledgeable in JavaScript server-side
                 rendering (Next.js).
@@ -225,6 +226,17 @@ const page = () => {
               <p>
                 All the while, I strive to maintain code as meticulously clean
                 and developer-friendly, adhering to best practices.
+              </p>
+              <br />
+              <p>
+                My résumé is available for download <a href="/assets/CV-2023.pdf" style={{ color: "var(--global--color-primary)" }} rel="noreferrer" target="_blank">here.</a>
+              </p>
+              <br />
+              <p>
+                For work enquiries, you may reach me through the
+                <Link href="/contact" style={{ color: "var(--global--color-primary)", padding: "0 0.5rem 0 0.5rem" }}>Contact</Link>
+                section or through <a style={{ color: "var(--global--color-primary)" }} href="https://www.linkedin.com/in/bruno-luca/" rel="noreferrer" target="_blank">LinkedIn</a>
+                , or <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.
               </p>
             </div>
           </div>

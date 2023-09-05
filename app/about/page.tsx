@@ -4,8 +4,8 @@
 import "@/styles/SidePanel.css"
 import "@/styles/WorkTimeline.css"
 import Image from "next/image"
-import Mcast from "@/assets/MCAST Institute for the Creative Arts folder icon.png"
-import Wyzer from "@/assets/Wyzer folder icon.png"
+import McastLogo from "@/assets/MCAST-Institute-for-the-Creative-Arts-logo.png"
+import WyzerLogo from "@/assets/Wyzer-logo.png"
 import React, { useEffect, useState } from "react"
 import moment from "moment"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
@@ -15,7 +15,7 @@ const page = () => {
   const arr = [
     {
       id: "1",
-      icon: Wyzer,
+      icon: WyzerLogo,
       text: "Full Stack Developer",
       description: {
         heading1: "Full Stack Development:",
@@ -41,7 +41,7 @@ const page = () => {
     },
     {
       id: "2",
-      icon: Mcast,
+      icon: McastLogo,
       text: "Bachelor of Arts (Honours) in Interactive Media",
       description: "",
       location: "MCAST",
@@ -116,9 +116,8 @@ const page = () => {
                 onClick={() => selectWork(id)}
               >
                 <div
-                  className={`timeline_dot ${
-                    isCurrentlyActiveWork(id) ? "active" : ""
-                  }`}
+                  className={`timeline_dot ${isCurrentlyActiveWork(id) ? "active" : ""
+                    }`}
                 >
                   <Image
                     draggable="false"
@@ -131,16 +130,14 @@ const page = () => {
                 </div>
 
                 <div
-                  className={`timeline_info ${
-                    isCurrentlyActiveWork(id) && "active"
-                  }`}
+                  className={`timeline_info ${isCurrentlyActiveWork(id) && "active"
+                    }`}
                   style={{ flexDirection: "column" }}
                 >
                   <div style={{ paddingBottom: "1rem", fontSize: "small" }}>
                     {`${formatMonth(startMonth)} ${startYear}`} -{" "}
-                    {`${endMonth ? formatMonth(endMonth) : ""} ${
-                      endYear || ""
-                    }`}
+                    {`${endMonth ? formatMonth(endMonth) : ""} ${endYear || ""
+                      }`}
                   </div>
                   <div style={{ paddingBottom: "1rem", fontSize: "x-large" }}>
                     {text}
@@ -170,16 +167,14 @@ const page = () => {
             alt="Profile"
             width={200}
             height={200}
-            className={`profile_picture ${
-              isWorkSelected ? "profile_picture_minimized" : ""
-            }`}
+            className={`profile_picture ${isWorkSelected ? "profile_picture_minimized" : ""
+              }`}
             src={ProfilePicture}
-            // src={profilePicture}
+          // src={profilePicture}
           />
           <div
-            className={`profile_description ${
-              isWorkSelected ? "minimized" : ""
-            }`}
+            className={`profile_description ${isWorkSelected ? "minimized" : ""
+              }`}
           >
             <p className={`${isWorkSelected ? "profile_description_tag" : ""}`}>
               Hi, I&apos;m Luca.
@@ -189,9 +184,8 @@ const page = () => {
                   onClick={() => setIsWorkSelected((prev) => !prev)}
                 >
                   <p
-                    className={`${
-                      isProfileHovered ? "underline" : ""
-                    } profile_description_extender`}
+                    className={`${isProfileHovered ? "underline" : ""
+                      } profile_description_extender`}
                   >
                     Learn more about me.
                   </p>
@@ -238,15 +232,13 @@ const page = () => {
             </h1>
             <h3>
               {" "}
-              {`${formatMonth(activeWorkDetails.startMonth)} ${
-                activeWorkDetails.startYear
-              }`}{" "}
+              {`${formatMonth(activeWorkDetails.startMonth)} ${activeWorkDetails.startYear
+                }`}{" "}
               -{" "}
-              {`${
-                activeWorkDetails.endMonth
-                  ? formatMonth(activeWorkDetails.endMonth)
-                  : ""
-              } ${activeWorkDetails.endYear || ""}`}
+              {`${activeWorkDetails.endMonth
+                ? formatMonth(activeWorkDetails.endMonth)
+                : ""
+                } ${activeWorkDetails.endYear || ""}`}
             </h3>
 
             <h4>{activeWorkDetails.description.heading1}</h4>

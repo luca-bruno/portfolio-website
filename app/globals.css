@@ -121,11 +121,17 @@ button {
   transition: text-decoration 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
+@media {
   html {
     color-scheme: dark;
   }
 }
+/* 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
 
 @keyframes bubble {
   0%,

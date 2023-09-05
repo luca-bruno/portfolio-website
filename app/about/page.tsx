@@ -183,11 +183,12 @@ const page = () => {
               Hi, I&apos;m Luca.
               {isWorkSelected && (
                 <button
+                  id="profile_description_extender_container"
                   type="button"
                   onClick={() => setIsWorkSelected((prev) => !prev)}
                 >
                   <p
-                    className={`${isProfileHovered ? "underline" : ""} profile_description_extender`}
+                    className={`${isProfileHovered ? "" : ""} profile_description_extender`}
                   >
                     Learn more about me.
                   </p>

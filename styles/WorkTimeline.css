@@ -50,6 +50,10 @@
   transition: filter 0.2s ease-in-out;
 }
 
+.profile:hover #profile_description_extender_container {
+    color: rgb(255, 255, 255, 1);
+}
+
 .profile_picture {
   user-select: none;
   margin: auto;
@@ -79,15 +83,22 @@
   align-items: center;
 }
 
+.minimized:hover{
+    color: white;
+}
+
 .profile_description_tag {
   font-size: x-large;
   transition: font-size 0.8s ease-in-out;
 }
 
+#profile_description_extender_container {
+    color: rgb(255, 255, 255, 0.4);
+}
+
 .profile_description_extender {
   opacity: 0;
   margin-left: 0.5rem;
-  color: white;
   transition: color 0.2s ease-in-out;
   animation: fadeAndSlide 1.5s ease-in-out forwards;
 }

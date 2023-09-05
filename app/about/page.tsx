@@ -4,12 +4,12 @@
 import "@/styles/SidePanel.css"
 import "@/styles/WorkTimeline.css"
 import Image from "next/image"
-import McastLogo from "@/assets/MCAST-Institute-for-the-Creative-Arts-logo.png"
-import WyzerLogo from "@/assets/Wyzer-logo.png"
+import McastLogo from "@/public/assets/MCAST-Institute-for-the-Creative-Arts-logo.png"
+import WyzerLogo from "@/public/assets/Wyzer-logo.png"
 import React, { useEffect, useState } from "react"
 import moment from "moment"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
-import ProfilePicture from "@/assets/ProfilePicture.png"
+import ProfilePicture from "@/public/assets/ProfilePicture.png"
 
 const page = () => {
   const arr = [

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Image from "next/image"
-import { trivya1mobile } from "@/assets"
+import { trivya1mobile } from "@/public/assets"
 import "@/styles/SlideShowPreview.css"
 import { defaultImage } from "../Cards/data"
 import SlideShowPreviewTypes from "./types/SlideShowPreview.interface"
@@ -27,9 +27,8 @@ const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({
           alt="card"
           width={1920}
           height={1080}
-          className={`slide_show_container ${currentSlide ? "active" : ""} ${
-            isArrowHovered ? "slide_no_hover" : "slide_hover"
-          }`}
+          className={`slide_show_container ${currentSlide ? "active" : ""} ${isArrowHovered ? "slide_no_hover" : "slide_hover"
+            }`}
           src={images?.[currentSlide] || defaultImage}
         />
       ) : (

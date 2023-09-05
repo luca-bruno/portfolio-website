@@ -1,5 +1,5 @@
 import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
-import trivya from "@/assets/trivya1.png"
+import trivya from "@/public/assets/trivya1.png"
 
 const arr: ProjectTypes[] = [
   {

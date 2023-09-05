@@ -63,7 +63,6 @@ const page = () => {
     return mappedIcon?.src
   }
 
-  const [isWorkHovered, setIsWorkHovered] = useState(false)
   const [isProfileHovered, setIsProfileHovered] = useState(false)
   const [isWorkSelected, setIsWorkSelected] = useState(false)
   const [activeWork, setActiveWork] = useState<string>()
@@ -82,6 +81,8 @@ const page = () => {
       setActiveWorkDetails(undefined)
     }
   }
+
+
 
   useEffect(() => {
     setActiveWorkDetails(arr.filter((el) => activeWork === el.id)[0])
@@ -116,28 +117,25 @@ const page = () => {
                 onClick={() => selectWork(id)}
               >
                 <div
-                  className={`timeline_dot ${isCurrentlyActiveWork(id) ? "active" : ""
-                    }`}
+                  className="timeline_dot"
                 >
                   <Image
                     draggable="false"
                     alt={`${text} ${location} logo`}
                     width={200}
                     height={350}
-                    className="dot"
+                    className={`dot ${isCurrentlyActiveWork(id) ? "scale" : ""}`}
                     src={icon}
                   />
                 </div>
 
                 <div
-                  className={`timeline_info ${isCurrentlyActiveWork(id) && "active"
+                  className={`timeline_info ${isCurrentlyActiveWork(id) ? "active" : ""
                     }`}
                   style={{ flexDirection: "column" }}
                 >
                   <div style={{ paddingBottom: "1rem", fontSize: "small" }}>
-                    {`${formatMonth(startMonth)} ${startYear}`} -{" "}
-                    {`${endMonth ? formatMonth(endMonth) : ""} ${endYear || ""
-                      }`}
+                    {`${formatMonth(startMonth)} ${startYear} - ${endMonth ? formatMonth(endMonth) : "Present"} ${endYear || ""}`}
                   </div>
                   <div style={{ paddingBottom: "1rem", fontSize: "x-large" }}>
                     {text}
@@ -167,14 +165,12 @@ const page = () => {
             alt="Profile"
             width={200}
             height={200}
-            className={`profile_picture ${isWorkSelected ? "profile_picture_minimized" : ""
-              }`}
+            className={`profile_picture ${isWorkSelected ? "profile_picture_minimized" : ""}`}
             src={ProfilePicture}
           // src={profilePicture}
           />
           <div
-            className={`profile_description ${isWorkSelected ? "minimized" : ""
-              }`}
+            className={`profile_description ${isWorkSelected ? "minimized" : ""}`}
           >
             <p className={`${isWorkSelected ? "profile_description_tag" : ""}`}>
               Hi, I&apos;m Luca.
@@ -184,8 +180,7 @@ const page = () => {
                   onClick={() => setIsWorkSelected((prev) => !prev)}
                 >
                   <p
-                    className={`${isProfileHovered ? "underline" : ""
-                      } profile_description_extender`}
+                    className={`${isProfileHovered ? "underline" : ""} profile_description_extender`}
                   >
                     Learn more about me.
                   </p>
@@ -231,14 +226,8 @@ const page = () => {
               {activeWorkDetails.text} at {activeWorkDetails.location}
             </h1>
             <h3>
-              {" "}
-              {`${formatMonth(activeWorkDetails.startMonth)} ${activeWorkDetails.startYear
-                }`}{" "}
-              -{" "}
-              {`${activeWorkDetails.endMonth
-                ? formatMonth(activeWorkDetails.endMonth)
-                : ""
-                } ${activeWorkDetails.endYear || ""}`}
+              {`${formatMonth(activeWorkDetails.startMonth)} ${activeWorkDetails.startYear} - 
+              ${activeWorkDetails.endMonth ? formatMonth(activeWorkDetails.endMonth) : "Present"} ${activeWorkDetails.endYear || ""}`}
             </h3>
 
             <h4>{activeWorkDetails.description.heading1}</h4>

@@ -178,3 +178,8 @@
   transform: scale(1.02);
   color: var(--global--color-primary);
 }
+
+.scale, .scale:hover {
+    transform: scale(1.3);
+    transition: transform 0.2s ease-in-out;
+}

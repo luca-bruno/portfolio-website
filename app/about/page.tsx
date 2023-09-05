@@ -43,7 +43,14 @@ const page = () => {
       id: "2",
       icon: McastLogo,
       text: "Bachelor of Arts (Honours) in Interactive Media",
-      description: "",
+      description: {
+        heading1: "Grade:",
+        content1: "First Class",
+        heading2: "Dissertation:",
+        content2: "Through the eyes of AI: the potential professional application of the automated creation of basic webpages” - An analysis of the pix2code algorithm and its practical capabilities",
+        heading3: "Key units:",
+        content3: "Hybrid web & mobile app development using HTML, CSS (SASS), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction(UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
+      },
       location: "MCAST",
       stack: [],
       startMonth: 9,
@@ -230,12 +237,12 @@ const page = () => {
               ${activeWorkDetails.endMonth ? formatMonth(activeWorkDetails.endMonth) : "Present"} ${activeWorkDetails.endYear || ""}`}
             </h3>
 
-            <h4>{activeWorkDetails.description.heading1}</h4>
-            <p>{activeWorkDetails.description.content1}</p>
-            <h4>{activeWorkDetails.description.heading2}</h4>
-            <p>{activeWorkDetails.description.content2}</p>
-            <h4>{activeWorkDetails.description.heading3}</h4>
-            <p>{activeWorkDetails.description.content3}</p>
+            <h4>{activeWorkDetails.description.heading1 || ""}</h4>
+            <p>{activeWorkDetails.description.content1 || ""}</p>
+            <h4>{activeWorkDetails.description.heading2 || ""}</h4>
+            <p>{activeWorkDetails.description.content2 || ""}</p>
+            <h4>{activeWorkDetails.description.heading3 || ""}</h4>
+            <p>{activeWorkDetails.description.content3 || ""}</p>
 
             <div className="sidepanel_stack">
               <p className="sidepanel_stack_title">

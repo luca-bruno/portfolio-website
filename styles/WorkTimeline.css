@@ -110,6 +110,10 @@
   padding: 0.5rem 0 0.5rem 0;
 }
 
+.work_timeline_description h4::before {
+    content: "• ";
+}
+
 .timeline_dot {
   display: flex;
   align-items: "center";

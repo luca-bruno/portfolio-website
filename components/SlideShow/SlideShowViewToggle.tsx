@@ -17,7 +17,7 @@ const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({
       checked={isMobileView}
       onChange={() => setIsMobileView((prev) => !prev)}
     />
-    <label htmlFor="darkmode-toggle">
+    <label className="darkmode-toggle-label" htmlFor="darkmode-toggle">
       <FontAwesomeIcon icon={faDesktop} className="desktop" />
       <FontAwesomeIcon icon={faMobile} className="mobile" />
     </label>

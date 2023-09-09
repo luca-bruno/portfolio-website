@@ -5,7 +5,7 @@
   justify-content: flex-end;
 }
 
-label {
+.darkmode-toggle-label {
   width: 40%;
   height: 3rem;
   position: relative;
@@ -19,7 +19,7 @@ label {
   transition: 0.3s;
 }
 
-label:after {
+.darkmode-toggle-label:after {
   content: "";
   width: 50%;
   height: 3rem;
@@ -30,22 +30,22 @@ label:after {
   background-color: var(--global--color-primary);
 }
 
-input {
+#darkmode-toggle {
   width: 0;
   height: 0;
   visibility: hidden;
 }
 
-input:checked + label {
+#darkmode-toggle:checked + .darkmode-toggle-label {
   background-color: var(--global--color-secondary);
 }
 
-input:checked + label:after {
+#darkmode-toggle:checked + .darkmode-toggle-label:after {
   transform: translateX(+100%);
   background-color: var(--global--color-primary);
 }
 
-label:active:after {
+.darkmode-toggle-label:active:after {
   width: 52%;
 }
 

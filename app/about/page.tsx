@@ -4,19 +4,20 @@
 import "@/styles/SidePanel.css"
 import "@/styles/WorkTimeline.css"
 import Image from "next/image"
-import McastLogo from "@/public/assets/MCAST-Institute-for-the-Creative-Arts-logo.png"
-import WyzerLogo from "@/public/assets/Wyzer-logo.png"
+import McastIcon from "@/public/assets/mcast-icon.png"
+import WyzerIcon from "@/public/assets/wyzer-icon.png"
 import React, { useEffect, useState } from "react"
 import moment from "moment"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
-import ProfilePicture from "@/public/assets/ProfilePicture.png"
+import ProfilePicture from "@/public/assets/profile-picture.png"
 import Link from "next/link"
+import capitaliseEachWord from "@/helpers"
 
 const page = () => {
   const arr = [
     {
       id: "1",
-      icon: WyzerLogo,
+      icon: WyzerIcon,
       text: "Full Stack Developer",
       description: {
         heading1: "Full Stack Development:",
@@ -24,25 +25,36 @@ const page = () => {
           "Keeping up to date with the latest front-end/JavaScript trends, and utilising cutting-edge front-end technologies, such as functional React, TypeScript, Tailwind, Headless UI, Redux Toolkit and RTK Query to create scalable, robust and elegant user experiences. Developing RESTful APIs and WebSockets using functional programming language Elixir, its Phoenix web framework and Ecto database DSL, as well as PostgreSQL. Formulating and debugging business logic processes using Business Process Modeling Notation standard in conjunction with the Camunda Zeebe workflow engine and the Alibaba Formily form solution library.",
         heading2: "Collaborative Development in an Agile Environment:",
         content2:
-          "Working in an agile, scrum environment, utilizing methodologies such as “Scrumban” (Scrum + Kanban)board and sprints, as well as gaining familiarity with management tools like Jira and Clockify. Participating in every-other-day team stand-ups and sprint planning meetings, ensuring efficient task allocation and timely delivery of features. Collaborating with team members through tools like Figma for design ideation, and pair programming to promote knowledge sharing and code quality. Utilizing Git for version control, following practices such as merging and rebasing to maintain a clean, standardised codebase with developer experience in mind.",
+          "Working in an agile, scrum environment, utilizing methodologies such as “Scrumban” (Scrum + Kanban) board and sprints, as well as gaining familiarity with management tools like Jira and Clockify. Participating in every-other-day team stand-ups and sprint planning meetings, ensuring efficient task allocation and timely delivery of features. Collaborating with team members through tools like Figma for design ideation, and pair programming to promote knowledge sharing and code quality. Utilizing Git for version control, following practices such as merging and rebasing to maintain a clean, standardised codebase with developer experience in mind.",
         heading3: "Client Interaction and Requirements Gathering:",
         content3:
-          " Working closely with clients, both through direct meetings and regular communication, to understand and proactively adapt to rapidly-evolving requirements and expectations."
+          "Working closely with clients, both through direct meetings and regular communication, to understand and proactively adapt to rapidly-evolving requirements and expectations."
       },
       location: "Wyzer",
       stack: [
-        "elixir",
+        "react",
         "typescript",
         "reduxToolkit",
         "rtkQuery",
-        "tailwindcss"
+        "elixir",
+        "phoenix",
+        "ecto",
+        "postgresql",
+        "tailwindcss",
+        "headlessUi",
+        "eslint",
+        "vite",
+        "yarn",
+        "figma",
+        "zeebe",
+        "formily"
       ],
       startMonth: 1,
       startYear: 2022
     },
     {
       id: "2",
-      icon: McastLogo,
+      icon: McastIcon,
       text: "Bachelor of Arts (Honours) in Interactive Media",
       description: {
         heading1: "Grade:",
@@ -53,7 +65,22 @@ const page = () => {
         content3: "Hybrid web & mobile app development using HTML, CSS (SASS), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction(UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
       },
       location: "MCAST",
-      stack: [],
+      stack: [
+        "php",
+        "mysql",
+        "codeigniter",
+        "wordpress",
+        "wix",
+        "unity",
+        "cSharp",
+        "html",
+        "bootstrap",
+        "css",
+        "sass",
+        "angular",
+        "javascript",
+        "ionic"
+      ],
       startMonth: 9,
       startYear: 2018,
       endMonth: 6,
@@ -261,16 +288,16 @@ const page = () => {
 
             <div className="sidepanel_stack">
               <p className="sidepanel_stack_title">
-                Made using the following technologies:
+                Technologies used:
               </p>
-              {arr[0].stack.map(
+              {activeWorkDetails.stack.map(
                 (tech: string) =>
                   tech && (
                     <Image
                       key={tech}
                       className="sidepanel_stack_item_icon"
                       src={check(tech)}
-                      alt="My SVG"
+                      alt={`${capitaliseEachWord(tech)} logo`}
                       width={50}
                       height={50}
                     />

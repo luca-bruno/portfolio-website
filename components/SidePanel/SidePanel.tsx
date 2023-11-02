@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import React from "react"
+import capitaliseEachWord from "@/helpers"
 import SidePanelTypes from "./types/SidePanel.interface"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import "@/styles/SidePanel.css"
@@ -98,7 +99,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({
                         key={tech}
                         className="sidepanel_stack_item_icon"
                         src={check(tech)}
-                        alt="My SVG"
+                        alt={`${capitaliseEachWord(tech)} logo`}
                         width={50}
                         height={50}
                       />

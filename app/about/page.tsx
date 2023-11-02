@@ -256,7 +256,7 @@ const page = () => {
               </p>
               <br />
               <p>
-                My résumé is available for download <a href="/assets/CV-2023.pdf" style={{ color: "var(--global--color-primary)" }} rel="noreferrer" target="_blank">here.</a>
+                My résumé is available for download <a href="/assets/cv-2023.pdf" style={{ color: "var(--global--color-primary)" }} rel="noreferrer" target="_blank">here.</a>
               </p>
               <br />
               <p>

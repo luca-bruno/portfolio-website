@@ -62,24 +62,26 @@ const page = () => {
         heading2: "Dissertation:",
         content2: "Through the eyes of AI: the potential professional application of the automated creation of basic webpages” - An analysis of the pix2code algorithm and its practical capabilities",
         heading3: "Key units:",
-        content3: "Hybrid web & mobile app development using HTML, CSS (SASS), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction(UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
+        content3: "Hybrid web & mobile app development using HTML, CSS (SASS), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction (UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
       },
       location: "MCAST",
       stack: [
-        "php",
-        "mysql",
-        "codeigniter",
-        "wordpress",
-        "wix",
-        "unity",
-        "cSharp",
         "html",
-        "bootstrap",
         "css",
-        "sass",
-        "angular",
         "javascript",
-        "ionic"
+        "angular",
+        "ionic",
+        "typescript",
+        "sass",
+        "bootstrap",
+        "php",
+        "codeigniter",
+        "mysql",
+        "cSharp",
+        "unity",
+        "adobeXd",
+        "wordpress",
+        "wix"
       ],
       startMonth: 9,
       startYear: 2018,
@@ -264,6 +266,8 @@ const page = () => {
                 <Link href="/contact" style={{ color: "var(--global--color-primary)", padding: "0 0.5rem 0 0.5rem" }}>Contact</Link>
                 section or through <a style={{ color: "var(--global--color-primary)" }} href="https://www.linkedin.com/in/bruno-luca/" rel="noreferrer" target="_blank">LinkedIn</a>
                 , or <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.
+                {" or "}
+                <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.
               </p>
             </div>
           </div>

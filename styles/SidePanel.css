@@ -107,8 +107,24 @@
   transition: filter 0.2s ease-in-out;
 }
 
+.sidepanel_stack > img[alt="Expressjs logo"],
+.sidepanel_stack > img[alt="Nextjs logo"],
+.sidepanel_stack > img[alt="Unity logo"],
+.sidepanel_stack > img[alt="Wix logo"] {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .sidepanel_stack:hover {
   filter: grayscale(0%);
+}
+
+.sidepanel_stack:hover > img[alt="Expressjs logo"],
+.sidepanel_stack:hover > img[alt="Nextjs logo"],
+.sidepanel_stack:hover > img[alt="Unity logo"],
+.sidepanel_stack:hover > img[alt="Wix logo"] {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .sidepanel_stack_title {
@@ -121,6 +137,7 @@
   width: 3rem;
   height: 3rem;
   animation: bubble 4s ease-in-out infinite;
+  user-select: none;
 }
 
 .sidepanel_stack_item_icon:hover {

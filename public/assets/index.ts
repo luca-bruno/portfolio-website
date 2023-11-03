@@ -13,6 +13,7 @@ import figma from "@/public/assets/figma-icon.svg"
 import formily from "@/public/assets/formily-icon.svg"
 import headlessUi from "@/public/assets/headless-ui-icon.svg"
 import html from "@/public/assets/html-icon.svg"
+import husky from "@/public/assets/husky-icon.svg"
 import ionic from "@/public/assets/ionic-icon.svg"
 import javascript from "@/public/assets/javascript-icon.svg"
 import jest from "@/public/assets/jest-icon.svg"
@@ -25,7 +26,7 @@ import php from "@/public/assets/php-icon.svg"
 import postgresql from "@/public/assets/postgresql-icon.svg"
 import react from "@/public/assets/react-icon.svg"
 import reactRouter from "@/public/assets/react-router-icon.svg"
-import reactTestingLibrary from "@/public/assets/react-testing-library-icon.svg"
+import testingLibrary from "@/public/assets/testing-library-icon.svg"
 import reduxToolkit from "@/public/assets/redux-toolkit-icon.svg"
 import sass from "@/public/assets/sass-icon.svg"
 import sequelize from "@/public/assets/sequelize-icon.svg"
@@ -63,6 +64,7 @@ export {
   formily,
   headlessUi,
   html,
+  husky,
   ionic,
   javascript,
   jest,
@@ -75,7 +77,7 @@ export {
   postgresql,
   react,
   reactRouter,
-  reactTestingLibrary,
+  testingLibrary,
   reduxToolkit,
   sass,
   sequelize,

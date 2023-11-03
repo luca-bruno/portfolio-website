@@ -101,16 +101,17 @@
 .sidepanel_stack {
   text-align: center;
   margin-top: 1rem;
+  padding-bottom: 1rem;
   background-color: var(--global--color-secondary);
   border-radius: var(--global--border-radius);
   filter: grayscale(70%);
   transition: filter 0.2s ease-in-out;
 }
 
-.sidepanel_stack > img[alt="Expressjs logo"],
-.sidepanel_stack > img[alt="Nextjs logo"],
-.sidepanel_stack > img[alt="Unity logo"],
-.sidepanel_stack > img[alt="Wix logo"] {
+.sidepanel_stack_item_icon[alt="Express.js logo"],
+.sidepanel_stack_item_icon[alt="Next.js logo"],
+.sidepanel_stack_item_icon[alt="Unity logo"],
+.sidepanel_stack_item_icon[alt="Wix logo"] {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }
@@ -119,10 +120,10 @@
   filter: grayscale(0%);
 }
 
-.sidepanel_stack:hover > img[alt="Expressjs logo"],
-.sidepanel_stack:hover > img[alt="Nextjs logo"],
-.sidepanel_stack:hover > img[alt="Unity logo"],
-.sidepanel_stack:hover > img[alt="Wix logo"] {
+.sidepanel_stack:hover > div > span > img[alt="Express.js logo"],
+.sidepanel_stack:hover > div > span > img[alt="Next.js logo"],
+.sidepanel_stack:hover > div > span > img[alt="Unity logo"],
+.sidepanel_stack:hover > div > span > img[alt="Wix logo"] {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
@@ -133,9 +134,10 @@
 }
 
 .sidepanel_stack_item_icon {
-  margin: 1rem;
-  width: 3rem;
-  height: 3rem;
+  /* margin: auto; */
+  margin: 0.5rem auto 0.4rem auto;
+  /* width: 1rem; */
+  /* height: 1rem; */
   animation: bubble 4s ease-in-out infinite;
   user-select: none;
 }
@@ -146,4 +148,20 @@
 
 .sidepanel_stack_item_icon:not(:hover) {
   animation: bubble 4s ease-in-out infinite;
+}
+
+.sidepanel_stack_item_icon_label {
+  display: inline-block;
+  font-size: small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 96px;
+  margin: auto;
+  margin-top: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
 }

@@ -11,7 +11,6 @@ import moment from "moment"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import ProfilePicture from "@/public/assets/profile-picture.png"
 import Link from "next/link"
-import capitaliseEachWord from "@/helpers"
 
 const page = () => {
   const arr = [
@@ -32,22 +31,22 @@ const page = () => {
       },
       location: "Wyzer",
       stack: [
-        "react",
-        "typescript",
-        "reduxToolkit",
-        "rtkQuery",
-        "elixir",
-        "phoenix",
-        "ecto",
-        "postgresql",
-        "tailwindcss",
-        "headlessUi",
-        "eslint",
-        "vite",
-        "yarn",
-        "figma",
-        "zeebe",
-        "formily"
+        { prettyLabel: "React", src: "react" },
+        { prettyLabel: "TypeScript", src: "typescript" },
+        { prettyLabel: "Redux Toolkit", src: "reduxToolkit" },
+        { prettyLabel: "RTK Query", src: "rtkQuery" },
+        { prettyLabel: "Elixir", src: "elixir" },
+        { prettyLabel: "Phoenix", src: "phoenix" },
+        { prettyLabel: "Ecto", src: "ecto" },
+        { prettyLabel: "PostgreSQL", src: "postgresql" },
+        { prettyLabel: "TailwindCSS", src: "tailwindcss" },
+        { prettyLabel: "Headless UI", src: "headlessUi" },
+        { prettyLabel: "ESLint", src: "eslint" },
+        { prettyLabel: "Vite", src: "vite" },
+        { prettyLabel: "Yarn", src: "yarn" },
+        { prettyLabel: "Figma", src: "figma" },
+        { prettyLabel: "Formily", src: "formily" },
+        { prettyLabel: "Zeebe", src: "zeebe" }
       ],
       startMonth: 1,
       startYear: 2022
@@ -62,26 +61,26 @@ const page = () => {
         heading2: "Dissertation:",
         content2: "Through the eyes of AI: the potential professional application of the automated creation of basic webpages” - An analysis of the pix2code algorithm and its practical capabilities",
         heading3: "Key units:",
-        content3: "Hybrid web & mobile app development using HTML, CSS (SASS), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction (UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
+        content3: "Hybrid web & mobile app development using HTML, CSS (Sass), vanilla JavaScript (and its Angular framework, Ionic SDK), vanilla PHP (and its CodeIgniter framework) as well as through WYSIWYG editors (WordPress, Wix), user experience and user interaction (UX/UI), game development on Unity, game design and player psychology, introduction to game AI algorithms, principles of graphic design, personal branding, editorial design, visual thinking and idea generation"
       },
       location: "MCAST",
       stack: [
-        "html",
-        "css",
-        "javascript",
-        "angular",
-        "ionic",
-        "typescript",
-        "sass",
-        "bootstrap",
-        "php",
-        "codeigniter",
-        "mysql",
-        "cSharp",
-        "unity",
-        "adobeXd",
-        "wordpress",
-        "wix"
+        { prettyLabel: "HTML", src: "html" },
+        { prettyLabel: "CSS", src: "css" },
+        { prettyLabel: "JavaScript", src: "javascript" },
+        { prettyLabel: "Angular", src: "angular" },
+        { prettyLabel: "Ionic", src: "ionic" },
+        { prettyLabel: "TypeScript", src: "typescript" },
+        { prettyLabel: "Sass", src: "sass" },
+        { prettyLabel: "Bootstrap", src: "bootstrap" },
+        { prettyLabel: "PHP", src: "php" },
+        { prettyLabel: "CodeIgniter", src: "codeigniter" },
+        { prettyLabel: "MySQL", src: "mysql" },
+        { prettyLabel: "C#", src: "cSharp" },
+        { prettyLabel: "Unity", src: "unity" },
+        { prettyLabel: "Adobe XD", src: "adobeXd" },
+        { prettyLabel: "WordPress", src: "wordpress" },
+        { prettyLabel: "Wix", src: "wix" }
       ],
       startMonth: 9,
       startYear: 2018,
@@ -99,6 +98,8 @@ const page = () => {
     const { mappedIcon } = useStackIcon(icon) || {}
     return mappedIcon?.src
   }
+
+  const [hovered, setHovered] = useState<string | null>(null)
 
   const [isProfileHovered, setIsProfileHovered] = useState(false)
   const [isWorkSelected, setIsWorkSelected] = useState(false)
@@ -193,7 +194,10 @@ const page = () => {
         )}
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", margin: "auto", marginTop: "5.4rem" }}>
+      <div
+        className="slide_fade_from_right"
+        style={{ display: "flex", flexDirection: "column", margin: "auto" }}
+      >
         <div
           onMouseEnter={() => setIsProfileHovered(true)}
           onMouseLeave={() => setIsProfileHovered(false)}
@@ -263,9 +267,8 @@ const page = () => {
               <br />
               <p>
                 For work enquiries, you may reach me through the
-                <Link href="/contact" style={{ color: "var(--global--color-primary)", padding: "0 0.5rem 0 0.5rem" }}>Contact</Link>
+                <Link href="/contact" style={{ color: "var(--global--color-primary)", padding: "0 0.3rem 0 0.3rem" }}>Contact</Link>
                 section or through <a style={{ color: "var(--global--color-primary)" }} href="https://www.linkedin.com/in/bruno-luca/" rel="noreferrer" target="_blank">LinkedIn</a>
-                , or <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.
                 {" or "}
                 <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.
               </p>
@@ -294,19 +297,32 @@ const page = () => {
               <p className="sidepanel_stack_title">
                 Technologies used:
               </p>
-              {activeWorkDetails.stack.map(
-                (tech: string) =>
-                  tech && (
-                    <Image
-                      key={tech}
-                      className="sidepanel_stack_item_icon"
-                      src={check(tech)}
-                      alt={`${capitaliseEachWord(tech)} logo`}
-                      width={50}
-                      height={50}
-                    />
-                  )
-              )}
+              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+
+                {activeWorkDetails.stack.map(
+                  ({ prettyLabel, src }) =>
+                    src && (
+                      <span
+                        style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+                        key={prettyLabel}
+                      >
+                        <Image
+                          key={prettyLabel}
+                          className="sidepanel_stack_item_icon"
+                          src={check(src)}
+                          alt={`${prettyLabel} logo`}
+                          width={32}
+                          height={32}
+                          onMouseOver={() => setHovered(prettyLabel)}
+                          onMouseLeave={() => setHovered(null)}
+                        />
+                        <p key={prettyLabel} className={`sidepanel_stack_item_icon_label ${hovered !== prettyLabel ? "hide" : ""}`}>
+                          {prettyLabel}
+                        </p>
+                      </span>
+                    )
+                )}
+              </div>
             </div>
           </div>
         )}

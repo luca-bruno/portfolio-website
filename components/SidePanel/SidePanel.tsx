@@ -5,8 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
-import React from "react"
-import capitaliseEachWord from "@/helpers"
+import React, { useState } from "react"
 import SidePanelTypes from "./types/SidePanel.interface"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import "@/styles/SidePanel.css"
@@ -18,7 +17,9 @@ const SidePanel: React.FC<SidePanelTypes> = ({
   setActiveCard,
   activeCardDetails
 }) => {
-  const { name, images, hosted, repo, stack } = activeCardDetails || {}
+  const [hovered, setHovered] = useState<string | null>(null)
+
+  const { name, images, detailedDescription, hosted, repo, stack } = activeCardDetails || {}
 
   const check = (icon: string) => {
     const { mappedIcon } = useStackIcon(icon) || {}
@@ -53,12 +54,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({
 
             <div className="sidepanel_info">
               <p className="sidepanel_title">{name}</p>
-              <p className="sidepanel_description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                laboriosam impedit accusamus ex repellendus, ab excepturi?
-                Asperiores, vitae, consequatur dolorum aliquid aliquam est
-                perferendis recusandae eveniet at reiciendis saepe architecto!
-              </p>
+              <p className="sidepanel_description">{detailedDescription}</p>
             </div>
 
             <div className="sidepanel_buttons">
@@ -92,19 +88,32 @@ const SidePanel: React.FC<SidePanelTypes> = ({
                 <p className="sidepanel_stack_title">
                   Made using the following technologies:
                 </p>
-                {stack.map(
-                  (tech: string) =>
-                    tech && (
-                      <Image
-                        key={tech}
-                        className="sidepanel_stack_item_icon"
-                        src={check(tech)}
-                        alt={`${capitaliseEachWord(tech)} logo`}
-                        width={50}
-                        height={50}
-                      />
-                    )
-                )}
+                <div className="sidepanel_stack_items_container" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                  {stack.map(
+                    ({ prettyLabel, src }) =>
+                      src && (
+                        <span
+                          style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+                          key={prettyLabel}
+                        >
+                          <Image
+                            key={prettyLabel}
+                            className="sidepanel_stack_item_icon"
+                            src={check(src)}
+                            alt={`${prettyLabel} logo`}
+                            width={32}
+                            height={32}
+                            onMouseOver={() => setHovered(prettyLabel)}
+                            onMouseLeave={() => setHovered(null)}
+                          />
+                          <p key={prettyLabel} className={`sidepanel_stack_item_icon_label ${hovered !== prettyLabel ? "hide" : ""}`}>
+                            {prettyLabel}
+                          </p>
+                        </span>
+                      )
+                  )}
+                </div>
+
               </div>
             )}
           </div>

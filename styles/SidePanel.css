@@ -31,7 +31,7 @@
   margin: 2rem 0 2rem 0;
   padding: 3rem 1rem 3rem 1rem;
   border-radius: var(--global--border-radius);
-  animation: fadeAndSlide 0.9s ease-in-out forwards;
+  animation: fadeAndSlideFromRight 0.9s ease-in-out forwards;
 }
 
 .sidepanel_close_button_icon {
@@ -102,6 +102,7 @@
   text-align: center;
   margin-top: 1rem;
   padding-bottom: 1rem;
+  font-size: small;
   background-color: var(--global--color-secondary);
   border-radius: var(--global--border-radius);
   filter: grayscale(70%);

@@ -24,7 +24,7 @@ const Cards: React.FC<CardsTypes> = ({
   }
 
   return (
-    <div className="cards_grid">
+    <div className="cards_grid slide_fade_from_left">
       {/* TODO: paginate w/ limit 9 */}
       {/* TODO: active card logic */}
       {arr.map((card: ProjectTypes) => (

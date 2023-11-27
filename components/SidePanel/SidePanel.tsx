@@ -58,7 +58,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({
             </div>
 
             <div className="sidepanel_buttons">
-              {hosted && (
+              {hosted ? (
                 <a href={hosted} rel="noreferrer" target="_blank">
                   <button type="button" className="sidepanel_button">
                     <FontAwesomeIcon
@@ -68,7 +68,10 @@ const SidePanel: React.FC<SidePanelTypes> = ({
                     Visit live site
                   </button>
                 </a>
-              )}
+              )
+                :
+                <div />
+              }
 
               {repo && (
                 <a href={repo} rel="noreferrer" target="_blank">

@@ -17,13 +17,15 @@ const Card: React.FC<CardTypes> = ({ card, selectCard, activeCard }) => {
       key={id}
     >
       <Image
+        src={images[0] || defaultImage}
         draggable="false"
+        key={id}
         alt="card"
         width={1920}
         height={1080}
         className="cards_image"
-        src={images[0] || defaultImage}
       />
+
       <div className="cards_text">
         <p className="cards_title">{name}</p>
         <p className="cards_description">{description}</p>

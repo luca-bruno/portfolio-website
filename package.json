@@ -44,6 +44,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^9.0.0",
     "moment": "^2.29.4",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "react-loader-spinner": "^5.4.5"
   }
 }

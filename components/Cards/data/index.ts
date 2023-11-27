@@ -5,7 +5,8 @@ const arr: ProjectTypes[] = [
   {
     name: "Trivya",
     description: "Cross-device webapp quiz solution",
-    detailedDescription: "",
+    // eslint-disable-next-line max-len
+    detailedDescription: "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
     repo: "https://github.com/luca-bruno/trivya/",
     hosted: "https://trivya-alpha.netlify.app/",
     images: [trivya.src],
@@ -38,7 +39,8 @@ const arr: ProjectTypes[] = [
   {
     name: "Portfolio",
     description: "Personal domain (this very site)",
-    detailedDescription: "",
+    // eslint-disable-next-line max-len
+    detailedDescription: "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
     repo: "https://github.com/luca-bruno/portfolio-website",
     hosted: "/",
     images: [""],

@@ -134,7 +134,7 @@ const page = () => {
 
   return (
     <div className="work_timeline">
-      <div className="timeline">
+      <div className="timeline slide_fade_from_left">
         {/* <WorkTimeline /> */}
         {arr.map(
           (

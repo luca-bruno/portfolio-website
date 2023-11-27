@@ -1,0 +1,52 @@
+.home_container {
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding-left: 10rem;
+}
+.home_title {
+    font-size: 10rem;
+}
+
+.home_description {
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+.home_location {
+    font-size: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+.home_links {
+    font-size: 2rem;
+}
+
+.home_link {
+    color: rgb(255, 255, 255, 0.4);
+}
+
+.home_link:hover {
+    color: var(--global--color-primary);
+    transition:
+        color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.slide_fade_from_top {
+    animation: fadeAndSlideFromTop 0.5s ease-in-out forwards;
+}
+
+.slide_fade_from_left {
+    animation: fadeAndSlideFromLeft 0.9s ease-in-out forwards;
+}
+
+.slide_fade_from_right {
+    animation: fadeAndSlideFromRight 0.9s ease-in-out forwards;
+}
+
+.fade_in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}

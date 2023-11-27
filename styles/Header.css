@@ -41,3 +41,7 @@
 .header_buttons_button_active {
   color: var(--global--color-primary);
 }
+
+.fade_in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}

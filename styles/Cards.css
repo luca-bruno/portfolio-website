@@ -7,3 +7,19 @@
   gap: 30px;
   padding: 5px 10px 0px 30px;
 }
+
+.slide_fade_from_top {
+  animation: fadeAndSlideFromTop 0.5s ease-in-out forwards;
+}
+
+.slide_fade_from_left {
+  animation: fadeAndSlideFromLeft 0.9s ease-in-out forwards;
+}
+
+.slide_fade_from_right {
+  animation: fadeAndSlideFromRight 0.9s ease-in-out forwards;
+}
+
+.fade_in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}

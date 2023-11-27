@@ -2,6 +2,7 @@
   --global--color-primary: #16ac8e;
   --global--color-secondary: rgb(128, 128, 128, 0.3);
   --global--border-radius: 15px;
+
   --max-width: 1100px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -191,6 +192,9 @@ input:focus, textarea:focus {
   transition: text-decoration 0.2s ease-in-out;
 }
 
+::selection {
+  background: var(--global--color-primary);
+}
 
 /* @media (prefers-color-scheme: dark) { */
   html {
@@ -217,10 +221,50 @@ input:focus, textarea:focus {
   }
 }
 
-@keyframes fadeAndSlide {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAndSlideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeAndSlideFromRight {
   0% {
     opacity: 0;
     transform: translateX(60px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeAndSlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
   }
   40% {
     opacity: 0;

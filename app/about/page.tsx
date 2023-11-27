@@ -268,7 +268,7 @@ const page = () => {
               <br />
               <p>
                 For work enquiries, you may reach me through the
-                <Link href="/contact" style={{ color: "var(--global--color-primary)", padding: "0 0.3rem 0 0.3rem" }}>Contact</Link>
+                <Link href="contact" style={{ color: "var(--global--color-primary)", padding: "0 0.3rem 0 0.3rem" }}>Contact</Link>
                 section or through <a style={{ color: "var(--global--color-primary)" }} href="https://www.linkedin.com/in/bruno-luca/" rel="noreferrer" target="_blank">LinkedIn</a>
                 {" or "}
                 <a style={{ color: "var(--global--color-primary)" }} href="https://github.com/luca-bruno" rel="noreferrer" target="_blank">GitHub</a>.

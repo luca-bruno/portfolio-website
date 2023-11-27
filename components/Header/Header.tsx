@@ -30,21 +30,21 @@ const Header = () => {
           }
           <div className="header_buttons">
             <Link
-              href="/about"
+              href="about"
               className={`header_buttons_button fade_in ${isActive("/about")}`}
               draggable={false}
             >
               About
             </Link>
             <Link
-              href="/projects"
+              href="projects"
               className={`header_buttons_button fade_in ${isActive("/projects")}`}
               draggable={false}
             >
               Projects
             </Link>
             <Link
-              href="/contact"
+              href="contact"
               className={`header_buttons_button fade_in ${isActive("/contact")}`}
               draggable={false}
             >

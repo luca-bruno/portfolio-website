@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+
 "use client"
 
 import "@/styles/SidePanel.css"
@@ -300,7 +301,7 @@ const page = () => {
               <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
 
                 {activeWorkDetails.stack.map(
-                  ({ prettyLabel, src }) =>
+                  ({ prettyLabel, src }: { prettyLabel: string, src: string }) =>
                     src && (
                       <span
                         style={{ display: "flex", flexDirection: "column", textAlign: "center" }}

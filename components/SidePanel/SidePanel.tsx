@@ -91,7 +91,8 @@ const SidePanel: React.FC<SidePanelTypes> = ({
                 <p className="sidepanel_stack_title">
                   Made using the following technologies:
                 </p>
-                <div className="sidepanel_stack_items_container" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                <div className="sidepanel_stack_items_container"
+                  style={{ overflowY: "auto", maxHeight: "9rem", display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
                   {stack.map(
                     ({ prettyLabel, src }) =>
                       src && (

@@ -18,7 +18,7 @@ const Home = () => (
 
     <div className="home_links slide_fade_from_left">
       <h4>
-        Here&apos;s a bit <Link href="about" className="home_link"><a>about me</a></Link>.
+        Here&apos;s a bit <Link href="about" className="home_link">about me</Link>.
       </h4>
       <h4>
         Like <Link href="projects" className="home_link">my work</Link>?

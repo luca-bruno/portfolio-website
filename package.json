@@ -10,14 +10,15 @@
     "lint-fix": "next lint --fix",
     "format": "prettier --check --ignore-path .gitignore app/ components/ hooks/ models/ styles/ utils/",
     "format-fix": "prettier --write --ignore-path .gitignore app/ components/ hooks/ models/ styles/ utils/",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "treeshake": "yarn knip"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@types/node": "20.5.6",
+    "@types/node": "^20.11.16",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -38,11 +39,13 @@
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.180",
     "sharp": "^0.32.5",
-    "typescript": "5.2.2"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "eslint-config-prettier": "^9.0.0",
+    "knip": "^4.3.1",
     "moment": "^2.29.4",
     "prettier": "^3.0.3",
     "react-loader-spinner": "^5.4.5"

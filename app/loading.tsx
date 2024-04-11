@@ -10,12 +10,12 @@ const loading = () =>
         <Oval
             height={30}
             width={30}
-            color="white"
+            color="#16ac8e"
             wrapperStyle={{ opacity: "50%", height: "calc(100vh - 64px)", alignItems: "center" }}
             wrapperClass=""
             visible
             ariaLabel="oval-loading"
-            secondaryColor="white"
+            secondaryColor="#16ac8e"
             strokeWidth={7}
             strokeWidthSecondary={7}
         />

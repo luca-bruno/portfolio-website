@@ -34,10 +34,7 @@
 }
 
 .header_name:hover,
-.header_buttons_button:hover {
-  color: var(--global--color-primary);
-}
-
+.header_buttons_button:hover,
 .header_buttons_button_active {
   color: var(--global--color-primary);
 }

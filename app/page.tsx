@@ -7,6 +7,7 @@ const Home = () => (
       <HomeTitles />
       <HomeLinks />
     </div>
+
     <HomeImage />
   </main>
 )

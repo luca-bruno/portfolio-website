@@ -115,6 +115,10 @@
   font-size: small;
   border-radius: var(--global--border-radius);
   animation: bubble 4s ease-in-out infinite;
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .work_timeline_description h4 {

@@ -1,30 +1,30 @@
 import {
-  LinkedInSvgComponent,
-  BehanceSvgComponent,
-  GitHubSvgComponent,
-  BrunoLucaSvgComponent
+  LinkedInIconSvgComponent,
+  BehanceIconSvgComponent,
+  GitHubIconSvgComponent,
+  BrunoLucaIconSvgComponent
 } from "@/components/SvgComponent"
 
 const CONTACT_LINK_LIST = [
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/bruno-luca/",
-    icon: LinkedInSvgComponent
+    icon: LinkedInIconSvgComponent
   },
   {
     name: "GitHub",
     link: "https://github.com/luca-bruno",
-    icon: GitHubSvgComponent
+    icon: GitHubIconSvgComponent
   },
   {
     name: "Behance",
     link: "https://www.behance.net/bronni",
-    icon: BehanceSvgComponent
+    icon: BehanceIconSvgComponent
   },
   {
     name: "BrunoLuca.com",
     link: "mailto:contact@brunoluca.com",
-    icon: BrunoLucaSvgComponent
+    icon: BrunoLucaIconSvgComponent
   }
 ]
 

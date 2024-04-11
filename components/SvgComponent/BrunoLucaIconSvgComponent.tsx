@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import * as React from "react"
 
-const BrunoLucaSvgComponent = () => (
+const BrunoLucaIconSvgComponent = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 123.28 123.29"
@@ -21,4 +21,4 @@ const BrunoLucaSvgComponent = () => (
         </text>
     </svg>
 )
-export default BrunoLucaSvgComponent
+export default BrunoLucaIconSvgComponent

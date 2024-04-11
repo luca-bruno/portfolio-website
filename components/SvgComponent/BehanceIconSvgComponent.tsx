@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import * as React from "react"
 
-const BehanceSvgComponent = () => (
+const BehanceIconSvgComponent = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -86,4 +86,4 @@ const BehanceSvgComponent = () => (
         </g>
     </svg>
 )
-export default BehanceSvgComponent
+export default BehanceIconSvgComponent

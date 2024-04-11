@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const GitHubSvgComponent = () => (
+const GitHubIconSvgComponent = () => (
     <svg
         viewBox="0 0 256 256"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ const GitHubSvgComponent = () => (
         </g>
     </svg>
 )
-export default GitHubSvgComponent
+export default GitHubIconSvgComponent

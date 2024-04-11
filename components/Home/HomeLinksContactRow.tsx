@@ -1,5 +1,5 @@
 import React from "react"
-import CONTACT_LIST from "./data"
+import CONTACT_LINK_LIST from "./data"
 import HomeLinksContactRowTypes from "./types/HomeLinksContactRow.interface"
 
 const HomeLinksContactRow: React.FC<HomeLinksContactRowTypes> = ({
@@ -7,7 +7,7 @@ const HomeLinksContactRow: React.FC<HomeLinksContactRowTypes> = ({
   setIsContactIconGlowing
 }) => (
   <div className="contact_row slide_fade_from_left">
-    {CONTACT_LIST.map(({ name, link, icon: IconSvgComponent }) => (
+    {CONTACT_LINK_LIST.map(({ name, link, icon: IconSvgComponent }) => (
       <a
         href={link}
         rel="noreferrer"

@@ -10,7 +10,8 @@ import Image from "next/image"
 const Header = () => {
   const pathname = usePathname()
 
-  const isActive = (currentPathname: string) => currentPathname === pathname ? "header_buttons_button_active" : ""
+  const isActive = (currentPathname: string) =>
+    currentPathname === pathname ? "header_buttons_button_active" : ""
 
   const isCurrentlyOnHomepage = pathname === "/"
 
@@ -21,7 +22,7 @@ const Header = () => {
     <header>
       <nav>
         <div className={`${rubik.className} header`}>
-          {isCurrentlyOnHomepage ?
+          {isCurrentlyOnHomepage ? (
             <Image
               width={38}
               height={38}
@@ -30,7 +31,7 @@ const Header = () => {
               alt="BrunoLuca icon"
               draggable="false"
             />
-            :
+          ) : (
             <Link
               href="/"
               className={`${leftHandSideStyle} ${isActive("/")} `}
@@ -38,7 +39,7 @@ const Header = () => {
             >
               LUCA BRUNO
             </Link>
-          }
+          )}
           <div className="header_buttons">
             <Link
               href="about"

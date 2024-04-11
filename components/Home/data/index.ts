@@ -5,7 +5,7 @@ import {
   BrunoLucaSvgComponent
 } from "@/components/SvgComponent"
 
-const CONTACT_LIST = [
+const CONTACT_LINK_LIST = [
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/bruno-luca/",
@@ -28,4 +28,4 @@ const CONTACT_LIST = [
   }
 ]
 
-export default CONTACT_LIST
+export default CONTACT_LINK_LIST

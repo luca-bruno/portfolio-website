@@ -1,4 +1,4 @@
-import { 
+import {
   adobeXd,
   angular,
   bootstrap,

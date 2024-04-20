@@ -1,11 +1,9 @@
 .home_container {
   height: calc(100vh - 64px);
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   margin: 0;
-  flex-basis: 66.66%;
 }
 .home_title {
   font-size: 10rem;

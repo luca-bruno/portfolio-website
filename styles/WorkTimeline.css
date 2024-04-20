@@ -1,13 +1,21 @@
 .work_timeline {
-  width: 100%;
+  /* width: 100%; */
+
+  /* MAKE HEIGHT GLOBAL VAR */
   height: calc(100vh - 64px);
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(30%, 47%));
+  /* overflow: hidden; */
+  /* display: grid; */
+  display: flex;
+  /* grid-template-columns: repeat(2, minmax(30%, 47%));
   grid-auto-rows: minmax(250px, auto);
-  gap: 30px;
-  margin-left: 30px;
-  margin-right: 10px;
+  gap: 30px; */
+
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 30px;
+  margin-right: 10px; */
+  /* background-color: red; */
 }
 
 .work_timeline svg {
@@ -15,21 +23,22 @@
 }
 
 .timeline {
-  /* width: 75%; */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 1rem;
+  margin: auto 0 auto 5.25rem;
+  flex-basis: 20%;
 }
 
 .profile {
   display: flex;
-  width: 100%;
-  margin-right: 10rem;
-  padding: 3rem;
-  background-color: rgb(128, 128, 128, 0.1);
-  border-radius: var(--global--border-radius);
+  /* width: 100%; */
+  /* margin-right: 10rem; */
+  padding: 3rem 0 3rem 0;
+  /* background-color: rgb(128, 128, 128, 0.1); */
+  /* border-radius: var(--global--border-radius); */
   animation: bubble 4s ease-in-out infinite;
   filter: grayscale(100%);
   height: auto;
@@ -51,14 +60,14 @@
 }
 
 .profile:hover #profile_description_extender_container {
-    color: rgb(255, 255, 255, 1);
+  color: rgb(255, 255, 255, 1);
 }
 
 .profile_picture {
   user-select: none;
   margin: auto;
-  width: 200px;
-  height: 350px;
+  width: 300px;
+  height: 500px;
   /* transform: scale(100%); */
   border-radius: var(--global--border-radius);
 }
@@ -73,7 +82,7 @@
 
 .profile_description {
   padding: 0rem 0rem 0rem 2rem;
-  font-size: medium;
+  font-size: 1.25rem;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -83,17 +92,18 @@
   align-items: center;
 }
 
-.minimized:hover{
-    color: white;
+.minimized:hover {
+  color: white;
 }
 
 .profile_description_tag {
+  display: flex;
   font-size: x-large;
   transition: font-size 0.8s ease-in-out;
 }
 
 #profile_description_extender_container {
-    color: rgb(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255, 0.4);
 }
 
 .profile_description_extender {
@@ -117,37 +127,45 @@
   animation: bubble 4s ease-in-out infinite;
   height: 610px;
   display: flex;
+}
+
+.work_timeline_description_text {
+  padding-right: 2rem;
+  font-size: medium;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .work_timeline_description h4 {
   padding: 0.5rem 0 0.5rem 0;
+  color: var(--global--color-primary);
+  font-size: larger;
 }
 
 .work_timeline_description h4::before {
-    content: "• ";
+  content: "• ";
 }
 
 .timeline_dot {
   display: flex;
-  align-items: "center";
+  /* align-items: center; */
 }
 
 /* replace */
 .dot {
-  width: 7rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
   /* text-align: left; */
   user-select: none;
-  margin: 0 5rem 0 5rem;
+  /* margin: 0 0 0 3.5rem; */
   transition: color 0.2s ease-in-out;
 }
 
 .timeline_step {
   text-align: left;
   border-radius: var(--global--border-radius);
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   align-items: center;
   /* margin: 10rem 0 10rem 0; */
@@ -156,14 +174,18 @@
 }
 
 .timeline_separator_grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, minmax(35%, 50%));
   grid-auto-rows: minmax(100px, auto);
-  gap: 30px;
+  gap: 30px; */
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(33.3%, auto));
 }
 
 .timeline_separator {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: auto;
   user-select: none;
@@ -171,35 +193,49 @@
   font-size: xx-large;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.1);
-  width: 7px;
-  height: 230px;
+  width: 5px;
+  height: 20px;
+  height: calc(100vh - (100vh - (64px)));
   border-radius: var(--global--border-radius);
 }
 
 .timeline_info {
   width: 100%;
-  background-color: rgb(128, 128, 128, 0.1);
-  padding: 1.5rem;
-  border-radius: var(--global--border-radius);
-  transition: background-color 0.2s ease-in-out;
+  /* background-color: rgb(128, 128, 128, 0.1); */
+  padding: 0 0 0 2rem;
+  /* border-radius: var(--global--border-radius); */
+  /* transition: background-color 0.2s ease-in-out; */
 }
 
 .timeline_info:hover {
-  background-color: var(--global--color-secondary);
-  transition: background-color 0.2s ease-in-out;
+  /* background-color: var(--global--color-secondary); */
   transform: scale(1.02);
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  color: var(--global--color-primary);
+  opacity: 0.8;
 }
 
 .active,
 .active:hover {
-  background-color: var(--global--color-secondary);
+  /* background-color: var(--global--color-secondary); */
   transform: scale(1.02);
   color: var(--global--color-primary);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
 }
 
-.scale, .scale:hover {
-    transform: scale(1.3);
-    transition: transform 0.2s ease-in-out;
+.scale,
+.scale:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.scale_default {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
 }
 
 /* TODO: so far all these have been common - so might be able to put inside helpers.css or global.css */

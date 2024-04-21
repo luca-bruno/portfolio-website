@@ -1,24 +1,16 @@
-"use client"
-
-import { Oval } from "react-loader-spinner"
+import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner"
+import "@/styles/loading.css"
 
 const loading = () => (
-  <div className="" style={{ justifyContent: "center", display: "flex" }}>
-    <Oval
-      height={30}
+  <div className="loading">
+    <LoadingSpinner
       width={30}
-      color="#16ac8e"
-      wrapperStyle={{
+      height={30}
+      styles={{
         opacity: "50%",
         height: "calc(100vh - 64px)",
         alignItems: "center"
       }}
-      wrapperClass=""
-      visible
-      ariaLabel="oval-loading"
-      secondaryColor="#16ac8e"
-      strokeWidth={7}
-      strokeWidthSecondary={7}
     />
   </div>
 )

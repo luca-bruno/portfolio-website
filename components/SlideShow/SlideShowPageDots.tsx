@@ -1,8 +1,8 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "@/styles/SlideShowPageDots.css"
 import React from "react"
 import SlideShowPageDotsTypes from "./types/SlideShowPageDots.interface"
+import "@/styles/SlideShow/SlideShowPageDots.css"
 
 const SlideShowPageDots: React.FC<SlideShowPageDotsTypes> = ({
   isMobileView,

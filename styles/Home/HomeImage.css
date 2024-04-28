@@ -1,0 +1,94 @@
+/* TODO: fix and understand wtf is going on here */
+.image_container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 33.33%;
+}
+
+.image {
+    --n: 4; /* number of tiles*/
+    --d: 20px; /* the distance of top/bottom movement */
+    --s: 1.1; /* control the horizontal distance  1>= (1:no distance)*/
+
+    width: 80%;
+    height: 48rem;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 30px;
+    position: relative;
+    overflow: hidden;
+    filter: grayscale(100%);
+    /* background-image: url(https://images.trailfinders.com/asset/229b2c/TF2267947/TF2267947_1500x1500.jpg); */
+    background-image: url(https://assets-global.website-files.com/5b89f678902f3d785fa66429/650dbe2b70d0835cb4bccbc5_.jpeg);
+    /* background-image: url(https://i.pinimg.com/564x/1c/23/51/1c235105ed37cc3b0b0f2b81d54846d3.jpg); */
+    background-size: 0 0;
+    transition: 0.5s;
+    transform: scale(var(--s));
+    transition: filter 0.5s ease-in-out;
+}
+
+  .image > * {
+    background-position: center;
+    position: absolute;
+    top: var(--d);
+    left: 0;
+    right: 0;
+    bottom: var(--d);
+    background-image: inherit;
+    background-size: cover;
+    -webkit-mask: linear-gradient(#fff, #fff) no-repeat;
+    -webkit-mask-size: calc(100% / var(--n) + 1px) 100%;
+    -webkit-mask-position: var(--p) 50%;
+    mask: linear-gradient(#fff, #fff) no-repeat;
+    mask-size: calc(100% / var(--n) + 1px) 100%;
+    mask-position: var(--p) 50%;
+    transition: inherit;
+    transform-origin: var(--p) 50%;
+}
+
+  /* we define as many as possible to cover the max value used */
+.image > :nth-child(1) {
+    --p: calc(0 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(2) {
+    --p: calc(1 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(3) {
+    --p: calc(2 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(4) {
+    --p: calc(3 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(5) {
+    --p: calc(4 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(6) {
+    --p: calc(5 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(7) {
+    --p: calc(6 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(8) {
+    --p: calc(7 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(9) {
+    --p: calc(8 * 100% / (var(--n) - 1));
+}
+.image > :nth-child(10) {
+    --p: calc(9 * 100% / (var(--n) - 1));
+}
+/**/
+
+.image > :nth-child(odd) {
+    transform: translateY(var(--d)) scale(calc(1 / var(--s)));
+}
+.image > :nth-child(even) {
+    transform: translateY(calc(-1 * var(--d))) scale(calc(1 / var(--s)));
+}
+
+.image:hover {
+    filter: grayscale(0%);
+    transition: filter 0.2s ease-in-out;
+}

@@ -4,7 +4,7 @@ import {
   faChevronLeft,
   faChevronRight
 } from "@fortawesome/free-solid-svg-icons"
-import "@/styles/SlideShowPreviewButtons.css"
+import "@/styles/SlideShow/SlideShowPreviewButtons.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SlideShowPreviewButtonsTypes from "./types/SlideShowPreviewButtons.interface"
 
@@ -18,11 +18,10 @@ const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({
 }) => (
   <>
     <div
-      className={`${
-        isArrowHovered
-          ? "overlay_center_container_hidden"
-          : "overlay_center_container"
-      }`}
+      className={`${isArrowHovered
+        ? "overlay_center_container_hidden"
+        : "overlay_center_container"
+        }`}
     >
       <button
         type="button"
@@ -37,12 +36,11 @@ const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({
       </button>
     </div>
 
-    <div className="">
+    <div>
       <button
         type="button"
-        className={`overlay_left_container overlay overlay_left ${
-          isArrowHovered ? "overlay_hovered" : ""
-        }`}
+        className={`overlay_left_container overlay overlay_left ${isArrowHovered ? "overlay_hovered" : ""
+          }`}
         disabled={isOnFirstPage}
         onMouseEnter={() => setIsArrowHovered(true)}
         onMouseLeave={() => setIsArrowHovered(false)}
@@ -50,9 +48,8 @@ const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({
       >
         <div>
           <div
-            className={`icon icon_arrow ${
-              isOnFirstPage ? "overlay_disabled" : ""
-            }`}
+            className={`icon icon_arrow ${isOnFirstPage ? "overlay_disabled" : ""
+              }`}
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </div>
@@ -63,9 +60,8 @@ const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({
     <div className="">
       <button
         type="button"
-        className={`overlay_right_container overlay overlay_right ${
-          isArrowHovered ? "overlay_hovered" : ""
-        }`}
+        className={`overlay_right_container overlay overlay_right ${isArrowHovered ? "overlay_hovered" : ""
+          }`}
         disabled={isOnLastPage}
         onMouseEnter={() => setIsArrowHovered(true)}
         onMouseLeave={() => setIsArrowHovered(false)}
@@ -73,9 +69,8 @@ const SlideShowPreviewButtons: React.FC<SlideShowPreviewButtonsTypes> = ({
       >
         <div>
           <div
-            className={`icon icon_arrow ${
-              isOnLastPage ? "overlay_disabled" : ""
-            }`}
+            className={`icon icon_arrow ${isOnLastPage ? "overlay_disabled" : ""
+              }`}
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </div>

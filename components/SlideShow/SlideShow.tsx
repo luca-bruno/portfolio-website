@@ -19,7 +19,6 @@ const SlideShow: React.FC<SlideShowTypes> = ({ images, imagesMobile, fullscreenM
 
   return (
     <>
-      {/* <div style={{ display: "flex", justifyContent: "center", margin: "0" }}> */}
       <SlideShowPreview
         {...{
           currentSlide,
@@ -30,7 +29,6 @@ const SlideShow: React.FC<SlideShowTypes> = ({ images, imagesMobile, fullscreenM
           imagesMobile
         }}
       />
-      {/* </div> */}
 
       <SlideShowPageDots
         {...{

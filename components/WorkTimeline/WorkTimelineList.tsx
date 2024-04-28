@@ -3,12 +3,14 @@ import { formatMonthToMMM } from "@/helpers"
 import Image from "next/image"
 import WORK_HISTORY_LIST from "../About/data"
 import WorkTimelineListTypes from "./types/WorkTimelineList.interface"
+import "@/styles/About/WorkTimelineList.css"
 
 const WorkTimelineList: React.FC<WorkTimelineListTypes> = ({ selectWork, activeWork }) => {
     const [hoveredWork, setHoveredWork] = useState<string>()
 
     const isCurrentlyActiveWork = (id: string) => activeWork === id
     const isCurrentlyHoveredWork = (id: string) => hoveredWork === id
+    // TODO: split better into comps + respective style sheets
 
     return (
         <div className="timeline slide_fade_from_left">

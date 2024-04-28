@@ -4,6 +4,7 @@ import ProfilePicture from "@/public/assets/profile-picture.jpg"
 import { formatMonthToMMM } from "@/helpers"
 import WorkTimelineDetailsTypes from "./types/WorkTimelineDetails.interface"
 import TechStack from "../TechStack/TechStack"
+import "@/styles/About/WorkTimelineDetails.css"
 
 const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
     isWorkSelected,
@@ -12,6 +13,7 @@ const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
 }) => {
 
     const [isProfileHovered, setIsProfileHovered] = useState(false)
+    // TODO: split better into comps + respective style sheets
 
     return (
         <div

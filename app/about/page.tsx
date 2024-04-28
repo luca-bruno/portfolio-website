@@ -1,11 +1,9 @@
-import "@/styles/SidePanel.css"
-import "@/styles/Home.css"
-import "@/styles/WorkTimeline.css"
+import "@/styles/About/About.css"
 import React from "react"
 import WorkTimeline from "@/components/WorkTimeline/WorkTimeline"
 
 const page = () => (
-  <main className="work_timeline">
+  <main className="about_container">
     <WorkTimeline />
   </main>
 )

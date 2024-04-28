@@ -1,5 +1,5 @@
 import { HomeTitles, HomeLinks, HomeImage } from "@/components/Home"
-import "@/styles/Home.css"
+import "@/styles/Home/Home.css"
 
 const Home = () => (
   <main className="home_container">

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import React, { useState } from "react"
 import HomeLinksContactRow from "./HomeLinksContactRow"
+import "@/styles/Home/HomeLinks.css"
 
 const HomeLinks = () => {
     const [isContactIconGlowing, setIsContactIconGlowing] = useState(false)

@@ -1,0 +1,7 @@
+.home_container {
+  height: var(--global--height-without-header);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}

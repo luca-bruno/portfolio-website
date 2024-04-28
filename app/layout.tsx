@@ -1,9 +1,7 @@
 import Header from "@/components/Header/Header"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-
-const inter = Inter({ subsets: ["latin"] })
+import { inter } from "./fonts"
 
 export const metadata: Metadata = {
   title: "Luca Bruno | Full Stack Developer",

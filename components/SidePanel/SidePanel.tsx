@@ -73,7 +73,7 @@ const SidePanel: React.FC<SidePanelTypes> = ({ activeCardDetails }) => {
           <div className="sidepanel_content" >
             <SlideShow {...{ images, imagesMobile, fullscreenMode, setFullscreenMode }} />
 
-            <div className="sidepanel_info">
+            <div>
               <h1 className="sidepanel_title">{name}</h1>
               <p className="sidepanel_description">{detailedDescription}</p>
             </div>

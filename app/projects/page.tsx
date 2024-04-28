@@ -1,8 +1,8 @@
+import "@/styles/Projects/Projects.css"
 import ProjectsShowcase from "@/components/ProjectsShowcase/ProjectsShowcase"
 
 const page = () => (
-  // TODO: add proper class like others
-  <main style={{ display: "flex", height: "50%" }}>
+  <main className="projects_container">
     <ProjectsShowcase />
   </main>
 )

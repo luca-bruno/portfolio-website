@@ -1,0 +1,38 @@
+.sidepanel_stack_item_icon {
+    margin: 0.5rem auto 0.4rem auto;
+    user-select: none;
+}
+
+/* to allow faded look on black and white icons that look unaffected by grayscale filter */
+.sidepanel_stack_item_icon[alt="Express.js logo"],
+.sidepanel_stack_item_icon[alt="Next.js logo"],
+.sidepanel_stack_item_icon[alt="Unity logo"],
+.sidepanel_stack_item_icon[alt="Wix logo"] {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* when hovering on stack panel, to cater for above style unique scenario */
+.sidepanel_stack:hover > div > span > img[alt="Express.js logo"],
+.sidepanel_stack:hover > div > span > img[alt="Next.js logo"],
+.sidepanel_stack:hover > div > span > img[alt="Unity logo"],
+.sidepanel_stack:hover > div > span > img[alt="Wix logo"] {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.sidepanel_stack_item_icon:hover {
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+.sidepanel_stack_item_icon_label {
+    display: inline-block;
+    font-size: small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 96px;
+    margin: auto;
+    margin-top: 0;
+    transition: opacity 0.2s ease-in-out;
+}

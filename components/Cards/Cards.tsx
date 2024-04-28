@@ -1,5 +1,5 @@
 import React from "react"
-import "@/styles/Cards.css"
+import "@/styles/Cards/Cards.css"
 import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
 import Card from "./Card"
 import { CardsTypes } from "./types/Cards.interface"

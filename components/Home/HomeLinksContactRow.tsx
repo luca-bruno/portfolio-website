@@ -1,6 +1,7 @@
 import React from "react"
 import CONTACT_LINK_LIST from "./data"
 import HomeLinksContactRowTypes from "./types/HomeLinksContactRow.interface"
+import "@/styles/Home/HomeLinksContactRow.css"
 
 const HomeLinksContactRow: React.FC<HomeLinksContactRowTypes> = ({
   isContactIconGlowing,

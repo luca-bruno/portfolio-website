@@ -1,0 +1,16 @@
+.home_links {
+    font-size: 2rem;
+}
+
+.home_link {
+    color: rgb(255, 255, 255, 0.4);
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.home_link:hover {
+    color: var(--global--color-primary);
+    transition:
+        color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}

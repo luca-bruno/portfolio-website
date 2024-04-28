@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import Image from "next/image"
-import "@/styles/SlideShowPreview.css"
 import { defaultImage } from "../Cards/data"
 import SlideShowPreviewTypes from "./types/SlideShowPreview.interface"
 import SlideShowPreviewButtons from "./SlideShowPreviewButtons"
+import "@/styles/SlideShow/SlideShowPreview.css"
 
 const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({
   currentSlide,
@@ -32,9 +32,8 @@ const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({
           alt="card"
           width={1920}
           height={1080}
-          className={`slide_show_container ${
-            isArrowHovered ? "slide_no_hover" : "slide_hover"
-          }`}
+          className={`slide_show_container ${isArrowHovered ? "slide_no_hover" : "slide_hover"
+            }`}
           src={images?.[currentSlide] || defaultImage}
         />
       ) : (
@@ -44,9 +43,8 @@ const SlideShowPreview: React.FC<SlideShowPreviewTypes> = ({
           alt="card"
           width={400}
           height={800}
-          className={`slide_show_container ${
-            isArrowHovered ? "slide_no_hover" : "slide_hover"
-          }`}
+          className={`slide_show_container ${isArrowHovered ? "slide_no_hover" : "slide_hover"
+            }`}
           src={imagesMobile?.[currentSlide] || defaultImage}
         />
       )}

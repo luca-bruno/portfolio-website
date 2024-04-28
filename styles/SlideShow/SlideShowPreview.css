@@ -1,6 +1,5 @@
 .slide_show_container {
   height: 50%;
-  /* width: 100%; */
   position: relative;
   user-select: none;
   aspect-ratio: 16 / 9;

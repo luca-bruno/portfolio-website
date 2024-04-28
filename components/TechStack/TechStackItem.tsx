@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Image from "next/image"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner"
+import "@/styles/TechStack/TechStackItem.css"
 
 const TechStackItem = ({ prettyLabel, index, location, src }) => {
     const [hovered, setHovered] = useState<string | null>(null)
@@ -11,6 +12,9 @@ const TechStackItem = ({ prettyLabel, index, location, src }) => {
         const { mappedIcon } = useStackIcon(icon) || {}
         return mappedIcon?.src
     }
+
+    // TODO: maybe? split better into comps + respective style sheets
+    // TODO: rm style into classes + rename all css lol
 
     return (
         <span

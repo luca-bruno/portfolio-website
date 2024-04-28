@@ -1,0 +1,25 @@
+.contact_row {
+    position: absolute;
+    margin-top: 1rem;
+}
+
+.contact_row > a {
+    margin: 0px 15px 0px 15px;
+}
+
+.contact_row > a:first-child {
+    margin-left: 0px;
+}
+
+.contact_icon {
+    fill: var(--global--color-secondary);
+    width: 35px;
+    height: 35px;
+    transition:
+        fill 0.2s ease-in-out,
+        fill 0.2s ease-in-out;
+}
+
+.contact_icon:hover {
+    fill: var(--global--color-primary);
+}

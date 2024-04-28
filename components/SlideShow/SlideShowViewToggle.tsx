@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "@/styles/SlideShowViewToggle.css"
 import React from "react"
 import { SlideShowViewToggleTypes } from "./types/SlideShow.interface"
+import "@/styles/SlideShow/SlideShowViewToggle.css"
 
 const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({
   setIsMobileView,
@@ -11,7 +10,7 @@ const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({
   setCurrentSlide
 }) => {
   const x = () => {
-    setIsMobileView((prev) => !prev)
+    setIsMobileView(prev => !prev)
     setCurrentSlide(0)
   }
 

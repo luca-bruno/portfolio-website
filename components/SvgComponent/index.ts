@@ -8,12 +8,12 @@ import GridViewSvgComponent from "./GridViewSvgComponent"
 import FeaturedViewSvgComponent from "./FeaturedViewSvgComponent"
 
 export {
-    BehanceIconSvgComponent,
-    BrunoLucaIconSvgComponent,
-    GitHubIconSvgComponent,
-    LinkedInIconSvgComponent,
-    ListViewSvgComponent,
-    CompactViewSvgComponent,
-    GridViewSvgComponent,
-    FeaturedViewSvgComponent
+  BehanceIconSvgComponent,
+  BrunoLucaIconSvgComponent,
+  GitHubIconSvgComponent,
+  LinkedInIconSvgComponent,
+  ListViewSvgComponent,
+  CompactViewSvgComponent,
+  GridViewSvgComponent,
+  FeaturedViewSvgComponent
 }

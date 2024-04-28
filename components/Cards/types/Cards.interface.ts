@@ -1,7 +1,6 @@
 import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
 
 interface CardsTypes {
-  setIsSidePanelOpen: (arg0: boolean) => void
   setActiveCard: (arg0: string | undefined) => void
   activeCard: string | undefined
   arr: ProjectTypes[]

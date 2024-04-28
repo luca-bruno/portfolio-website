@@ -19,6 +19,7 @@ const Header = () => {
   const rightHandSideStyle = "header_buttons_button fade_in"
 
   return (
+    // TODO: make these iterable from data.ts
     <header>
       <nav>
         <div className={`${rubik.className} header`}>

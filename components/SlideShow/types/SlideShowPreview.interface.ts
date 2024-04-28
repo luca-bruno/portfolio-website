@@ -6,6 +6,7 @@ interface SlideShowPreviewTypes {
   setFullscreenMode: (arg0: boolean) => void
   isMobileView: SlideShowViewToggleTypes["isMobileView"]
   images: SlideShowTypes["images"]
+  imagesMobile: SlideShowTypes["imagesMobile"]
 }
 
 export default SlideShowPreviewTypes

@@ -1,17 +1,18 @@
-interface ProjectStackType {
+export interface ProjectStackType {
   prettyLabel: string
   src: string
 }
 
-interface ProjectTypes {
+export interface ProjectTypes {
   name: string
   description: string
   detailedDescription: string
-  repo?: string
+  repoName?: string
+  repoUrl?: string
+  repoOwner?: string
   hosted?: string
-  images: string[]
+  images?: string[]
+  imagesMobile?: string[]
   id: string
   stack?: ProjectStackType[]
 }
-
-export default ProjectTypes

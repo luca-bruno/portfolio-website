@@ -1,15 +1,32 @@
 import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
 import trivya from "@/public/assets/projects/trivya/trivya-1.png"
+import prospectus1 from "@/public/assets/projects/prospectus/prospectus-mobile-1.png"
+import prospectus2 from "@/public/assets/projects/prospectus/prospectus-mobile-2.png"
+import prospectus3 from "@/public/assets/projects/prospectus/prospectus-mobile-3.png"
+import prospectus4 from "@/public/assets/projects/prospectus/prospectus-mobile-4.png"
+import prospectus5 from "@/public/assets/projects/prospectus/prospectus-mobile-5.png"
+import prospectus6 from "@/public/assets/projects/prospectus/prospectus-mobile-6.png"
+import prospectus7 from "@/public/assets/projects/prospectus/prospectus-mobile-7.png"
+import prospectus8 from "@/public/assets/projects/prospectus/prospectus-mobile-8.png"
+import prospectus9 from "@/public/assets/projects/prospectus/prospectus-mobile-9.png"
+import prospectus10 from "@/public/assets/projects/prospectus/prospectus-mobile-10.png"
+import prospectus11 from "@/public/assets/projects/prospectus/prospectus-mobile-11.png"
+import prospectus12 from "@/public/assets/projects/prospectus/prospectus-mobile-12.png"
+import prospectus13 from "@/public/assets/projects/prospectus/prospectus-mobile-13.png"
+import portfolio1 from "@/public/assets/projects/portfolio/portfolio-1.png"
 
 const arr: ProjectTypes[] = [
   {
     name: "Trivya",
     description: "Cross-device webapp quiz solution",
-    // eslint-disable-next-line max-len
-    detailedDescription: "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
-    repo: "https://github.com/luca-bruno/trivya/",
+    detailedDescription:
+      "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
+    repoName: "trivya",
+    repoUrl: "https://github.com/luca-bruno/trivya/",
+    repoOwner: "luca-bruno",
     hosted: "https://trivya-alpha.netlify.app/",
     images: [trivya.src],
+    imagesMobile: [],
     stack: [
       { prettyLabel: "React", src: "react" },
       { prettyLabel: "TypeScript", src: "typescript" },
@@ -39,11 +56,14 @@ const arr: ProjectTypes[] = [
   {
     name: "Portfolio",
     description: "Personal domain (this very site)",
-    // eslint-disable-next-line max-len
-    detailedDescription: "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
-    repo: "https://github.com/luca-bruno/portfolio-website",
+    detailedDescription:
+      "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
+    repoName: "portfolio-website",
+    repoUrl: "https://github.com/luca-bruno/portfolio-website",
+    repoOwner: "luca-bruno",
     hosted: "/",
-    images: [""],
+    images: [portfolio1.src],
+    imagesMobile: [],
     stack: [
       { prettyLabel: "Next.js", src: "nextjs" },
       { prettyLabel: "Sass", src: "sass" },
@@ -59,14 +79,15 @@ const arr: ProjectTypes[] = [
     name: "Diversify",
     description: "MCAST ICA Festival 2021 advertising",
     hosted: "http://diversify.icafestival.com/",
-    // eslint-disable-next-line max-len
-    detailedDescription: "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
+    detailedDescription:
+      "The website for Diversify, the 2021 MCAST ICA Festival. The site was collaboratively created in co-operation with fellow students and lecturers. The page served as a face for advertising the festival, as well as its offsite crowdfunding campaign hosted on ZAAR.",
     images: [
       "https://i0.wp.com/brunoluca.com/wp-content/uploads/2021/06/diversify1.png",
       "https://i0.wp.com/brunoluca.com/wp-content/uploads/2021/06/diversify2.png",
       "https://i0.wp.com/brunoluca.com/wp-content/uploads/2021/06/diversify3.png",
       "https://i0.wp.com/brunoluca.com/wp-content/uploads/2021/06/diversify4.png"
     ],
+    imagesMobile: [],
     stack: [
       { prettyLabel: "PHP", src: "php" },
       { prettyLabel: "CSS", src: "css" },
@@ -80,10 +101,27 @@ const arr: ProjectTypes[] = [
   {
     name: "Prospectus",
     description: "MCAST 2019/20 Prospectus proposal",
-    // eslint-disable-next-line max-len
-    detailedDescription: "A mobile app proposal for the MCAST Prospectus for 2019/20. The app featured a complete list of institutes, courses, student testimonials and past students' works, and was intended to cater to both prospective and already-enrolled MCAST students.",
-    repo: "https://www.github.com/prospectus",
-    images: [""],
+    detailedDescription:
+      "A mobile app proposal for the MCAST Prospectus for 2019/20. The app featured a complete list of institutes, courses, student testimonials and past students' works, and was intended to cater to both prospective and already-enrolled MCAST students.",
+    repoName: "ProspectusApp",
+    repoUrl: "https://www.github.com/luca-bruno/ProspectusApp",
+    repoOwner: "luca-bruno",
+    images: [],
+    imagesMobile: [
+      prospectus1.src,
+      prospectus2.src,
+      prospectus3.src,
+      prospectus4.src,
+      prospectus5.src,
+      prospectus6.src,
+      prospectus7.src,
+      prospectus8.src,
+      prospectus9.src,
+      prospectus10.src,
+      prospectus11.src,
+      prospectus12.src,
+      prospectus13.src
+    ],
     stack: [
       { prettyLabel: "Angular", src: "angular" },
       { prettyLabel: "TypeScript", src: "typescript" },

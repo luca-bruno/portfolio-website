@@ -5,7 +5,7 @@ import { defaultImage } from "./data"
 import { CardTypes } from "./types/Cards.interface"
 
 const Card: React.FC<CardTypes> = ({ card, selectCard, activeCard }) => {
-  const { id, images, name, description } = card || {}
+  const { id, images, imagesMobile, name, description } = card || {}
 
   const isCurrentlyActiveCard = (cardId: string) => activeCard === cardId
 
@@ -13,11 +13,11 @@ const Card: React.FC<CardTypes> = ({ card, selectCard, activeCard }) => {
     <button
       type="button"
       onClick={() => selectCard(id)}
-      className={`cards_card ${isCurrentlyActiveCard(id) && "active"}`}
+      className={`cards_card ${isCurrentlyActiveCard(id) && "active_card"}`}
       key={id}
     >
       <Image
-        src={images[0] || defaultImage}
+        src={images[0] || imagesMobile[0] || defaultImage}
         draggable="false"
         key={id}
         alt="card"

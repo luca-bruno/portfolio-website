@@ -2,6 +2,7 @@ import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
 
 interface SlideShowTypes {
   images?: ProjectTypes["images"]
+  imagesMobile?: ProjectTypes["imagesMobile"]
 }
 
 interface SlideShowViewToggleTypes {

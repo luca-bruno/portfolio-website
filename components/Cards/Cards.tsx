@@ -1,11 +1,10 @@
 import React from "react"
 import "@/styles/Cards.css"
-import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
 import Card from "./Card"
 import { CardsTypes } from "./types/Cards.interface"
 
 const Cards: React.FC<CardsTypes> = ({
-  setIsSidePanelOpen,
   setActiveCard,
   activeCard,
   arr,
@@ -13,11 +12,9 @@ const Cards: React.FC<CardsTypes> = ({
 }) => {
   const selectCard = (id: string) => {
     setActiveCard(id)
-    setIsSidePanelOpen(true)
-    setActiveCardDetails(arr.filter((el) => activeCard === el.id)[0])
+    setActiveCardDetails(arr.filter(el => activeCard === el.id)[0])
 
     if (id === activeCard) {
-      setIsSidePanelOpen(false)
       setActiveCard(undefined)
       setActiveCardDetails(undefined)
     }

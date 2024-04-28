@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import Image from "next/image"
 import ProfilePicture from "@/public/assets/profile-picture.jpg"
 import { formatMonthToMMM } from "@/helpers"
-import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import WorkTimelineDetailsTypes from "./types/WorkTimelineDetails.interface"
+import TechStack from "../TechStack/TechStack"
 
 const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
     isWorkSelected,
@@ -11,14 +11,7 @@ const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
     activeWorkDetails
 }) => {
 
-    const check = (icon: string) => {
-        const { mappedIcon } = useStackIcon(icon) || {}
-        return mappedIcon?.src
-    }
-
-    const [hovered, setHovered] = useState<string | null>(null)
     const [isProfileHovered, setIsProfileHovered] = useState(false)
-
 
     return (
         <div
@@ -165,52 +158,11 @@ const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
                         <p>{activeWorkDetails.description.content3 || ""}</p>
                     </div>
 
-                    <div className="sidepanel_stack">
-                        <p className="sidepanel_stack_title">Technologies used:</p>
-                        <div
-                            style={{
-                                display: "flex",
-                                flexWrap: "wrap",
-                                justifyContent: "space-evenly"
-                            }}
-                        >
-                            {activeWorkDetails.stack.map(
-                                ({
-                                    prettyLabel,
-                                    src
-                                }) =>
-                                    src && (
-                                        <span
-                                            style={{
-                                                display: "flex",
-                                                flexDirection: "column",
-                                                textAlign: "center"
-                                            }}
-                                            key={`${prettyLabel} used at ${activeWorkDetails.location}`}
-                                        >
-                                            <Image
-                                                key={`${prettyLabel} used at ${activeWorkDetails.location} logo`}
-                                                className="sidepanel_stack_item_icon"
-                                                draggable="false"
-                                                src={check(src)}
-                                                alt={`${prettyLabel} logo`}
-                                                width={32}
-                                                height={32}
-                                                onMouseOver={() => setHovered(prettyLabel)}
-                                                onMouseLeave={() => setHovered(null)}
-                                            />
-                                            <p
-                                                key={`${prettyLabel} used at ${activeWorkDetails.location} label`}
-                                                className={`sidepanel_stack_item_icon_label unselectable ${hovered !== prettyLabel ? "hide" : ""
-                                                    }`}
-                                            >
-                                                {prettyLabel}
-                                            </p>
-                                        </span>
-                                    )
-                            )}
-                        </div>
-                    </div>
+                    <TechStack
+                        title="Technologies used"
+                        stack={activeWorkDetails.stack}
+                        location={activeWorkDetails.location}
+                    />
                 </div>
             )}
         </div>

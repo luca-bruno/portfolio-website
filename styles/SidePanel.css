@@ -1,19 +1,11 @@
 .sidepanel {
+  display: flex;
   position: fixed;
   right: 0;
   height: 100%;
-  background-color: #333;
   color: white;
   overflow: hidden;
   transition: width 0.4s ease-in-out;
-}
-
-.open {
-  width: 35%;
-}
-
-.closed {
-  width: 0;
 }
 
 .sidepanel_extension {
@@ -27,7 +19,6 @@
 }
 
 .sidepanel_extension_icon {
-  background-color: #333;
   margin: 2rem 0 2rem 0;
   padding: 3rem 1rem 3rem 1rem;
   border-radius: var(--global--border-radius);
@@ -51,10 +42,6 @@
 
 .sidepanel_content {
   margin: 1rem 1rem 1rem 1rem;
-}
-
-.sidepanel_info {
-  color: var(--global--color-primary);
 }
 
 .sidepanel_title {
@@ -100,7 +87,7 @@
 
 .sidepanel_last_commit_date {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   font-size: small;
   margin: 0.5rem 0 0 0;
 }
@@ -114,7 +101,9 @@
   border-radius: var(--global--border-radius);
   filter: grayscale(70%);
   transition: filter 0.2s ease-in-out;
+  max-width: 35%;
   min-width: 35%;
+  height: min-content;
 }
 
 .sidepanel_stack_item_icon[alt="Express.js logo"],
@@ -143,20 +132,12 @@
 }
 
 .sidepanel_stack_item_icon {
-  /* margin: auto; */
   margin: 0.5rem auto 0.4rem auto;
-  /* width: 1rem; */
-  /* height: 1rem; */
-  animation: bubble 4s ease-in-out infinite;
   user-select: none;
 }
 
 .sidepanel_stack_item_icon:hover {
   animation: scaleUp 0.2s ease-in-out forwards;
-}
-
-.sidepanel_stack_item_icon:not(:hover) {
-  animation: bubble 4s ease-in-out infinite;
 }
 
 .sidepanel_stack_item_icon_label {

@@ -6,6 +6,7 @@
   border-radius: var(--global--border-radius);
   border: none;
   position: relative;
+  margin: 1.5rem 0 1.5rem 0;
   transition:
     background-color 0.2s ease-in-out,
     color 0.2s ease-in-out,
@@ -13,12 +14,15 @@
 }
 
 .cards_card:hover {
-  background-color: var(--global--color-secondary);
   transform: scale(1.02);
 }
 
-.active,
-.active:hover {
+.cards_card:first-of-type {
+  margin: 0 0 1.5rem 0;
+}
+
+.active_card,
+.active_card:hover {
   background-color: var(--global--color-secondary);
   transform: scale(1.02);
   color: var(--global--color-primary);
@@ -33,6 +37,7 @@
   left: 0;
   position: absolute;
   user-select: none;
+  object-fit: cover;
 }
 
 .cards_text {

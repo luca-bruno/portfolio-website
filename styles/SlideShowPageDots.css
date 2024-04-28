@@ -15,8 +15,8 @@
   transition: color 0.2s ease-in-out;
 }
 
-.sidepanel_slideshow_button_icon:hover {
-  color: var(--global--color-primary);
+.sidepanel_slideshow_button_icon:not(.sidepanel_slideshow_button_icon_active):hover {
+  color: rgb(255, 255, 255, 0.5);
 }
 
 .sidepanel_slideshow_button_icon_active {

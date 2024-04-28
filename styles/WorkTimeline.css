@@ -1,21 +1,10 @@
 .work_timeline {
-  /* width: 100%; */
-
-  /* MAKE HEIGHT GLOBAL VAR */
+  /* TODO: MAKE HEIGHT GLOBAL VAR */
   height: calc(100vh - 64px);
-  /* overflow: hidden; */
-  /* display: grid; */
   display: flex;
-  /* grid-template-columns: repeat(2, minmax(30%, 47%));
-  grid-auto-rows: minmax(250px, auto);
-  gap: 30px; */
-
   margin: 0;
   justify-content: center;
   align-items: center;
-  /* margin-left: 30px;
-  margin-right: 10px; */
-  /* background-color: red; */
 }
 
 .work_timeline svg {
@@ -34,14 +23,8 @@
 
 .profile {
   display: flex;
-  /* width: 100%; */
-  /* margin-right: 10rem; */
   padding: 3rem 0 3rem 0;
-  /* background-color: rgb(128, 128, 128, 0.1); */
-  /* border-radius: var(--global--border-radius); */
-  animation: bubble 4s ease-in-out infinite;
   filter: grayscale(100%);
-  height: auto;
   transition:
     filter 0.2s ease-in-out,
     padding 0.2s ease-in-out;
@@ -68,7 +51,6 @@
   margin: auto;
   width: 300px;
   height: 500px;
-  /* transform: scale(100%); */
   border-radius: var(--global--border-radius);
 }
 
@@ -124,7 +106,6 @@
   padding: 2rem;
   font-size: small;
   border-radius: var(--global--border-radius);
-  animation: bubble 4s ease-in-out infinite;
   height: 610px;
   display: flex;
 }
@@ -149,36 +130,25 @@
 
 .timeline_dot {
   display: flex;
-  /* align-items: center; */
 }
 
 /* replace */
 .dot {
   width: 5rem;
   height: 5rem;
-  /* text-align: left; */
   user-select: none;
-  /* margin: 0 0 0 3.5rem; */
   transition: color 0.2s ease-in-out;
 }
 
 .timeline_step {
   text-align: left;
   border-radius: var(--global--border-radius);
-  /* width: 80%; */
   display: flex;
   align-items: center;
-  /* margin: 10rem 0 10rem 0; */
   padding: 1rem;
-  animation: bubble 4s ease-in-out infinite;
 }
 
 .timeline_separator_grid {
-  /* display: grid;
-  grid-template-columns: repeat(3, minmax(35%, 50%));
-  grid-auto-rows: minmax(100px, auto);
-  gap: 30px; */
-
   display: grid;
   grid-template-columns: repeat(3, minmax(33.3%, auto));
 }
@@ -201,14 +171,10 @@
 
 .timeline_info {
   width: 100%;
-  /* background-color: rgb(128, 128, 128, 0.1); */
   padding: 0 0 0 2rem;
-  /* border-radius: var(--global--border-radius); */
-  /* transition: background-color 0.2s ease-in-out; */
 }
 
 .timeline_info:hover {
-  /* background-color: var(--global--color-secondary); */
   transform: scale(1.02);
   transition:
     transform 0.2s ease-in-out,
@@ -220,7 +186,6 @@
 
 .active,
 .active:hover {
-  /* background-color: var(--global--color-secondary); */
   transform: scale(1.02);
   color: var(--global--color-primary);
   transition: opacity 0.2s ease-in-out;

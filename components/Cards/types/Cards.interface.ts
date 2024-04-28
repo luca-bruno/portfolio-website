@@ -1,9 +1,9 @@
-import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 
 interface CardsTypes {
   setActiveCard: (arg0: string | undefined) => void
   activeCard: string | undefined
-  arr: ProjectTypes[]
+  projectList: ProjectTypes[]
   setActiveCardDetails: (arg0: ProjectTypes | undefined) => void
 }
 

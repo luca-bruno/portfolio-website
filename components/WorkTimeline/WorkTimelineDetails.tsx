@@ -146,7 +146,7 @@ const WorkTimelineDetails: React.FC<WorkTimelineDetailsTypes> = ({
                         <h3>
                             {`${formatMonthToMMM(activeWorkDetails.startMonth)} ${activeWorkDetails.startYear
                                 } - 
-              ${activeWorkDetails.endMonth
+                ${activeWorkDetails.endMonth
                                     ? formatMonthToMMM(activeWorkDetails.endMonth)
                                     : "Present"
                                 } ${activeWorkDetails.endYear || ""}`}

@@ -1,18 +1,18 @@
 import React from "react"
 import "@/styles/Cards/Cards.css"
-import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 import Card from "./Card"
 import { CardsTypes } from "./types/Cards.interface"
 
 const Cards: React.FC<CardsTypes> = ({
   setActiveCard,
   activeCard,
-  arr,
+  projectList,
   setActiveCardDetails
 }) => {
   const selectCard = (id: string) => {
     setActiveCard(id)
-    setActiveCardDetails(arr.filter(el => activeCard === el.id)[0])
+    setActiveCardDetails(projectList.filter(el => activeCard === el.id)[0])
 
     if (id === activeCard) {
       setActiveCard(undefined)
@@ -24,7 +24,7 @@ const Cards: React.FC<CardsTypes> = ({
     <div className="cards_grid slide_fade_from_left">
       {/* TODO: paginate w/ limit 9 */}
       {/* TODO: active card logic */}
-      {arr.map((card: ProjectTypes) => (
+      {projectList.map((card: ProjectTypes) => (
         <Card key={card.id} {...{ card, selectCard, activeCard }} />
       ))}
     </div>

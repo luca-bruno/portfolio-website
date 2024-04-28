@@ -17,7 +17,7 @@ const Card: React.FC<CardTypes> = ({ card, selectCard, activeCard }) => {
       key={id}
     >
       <Image
-        src={images[0] || imagesMobile[0] || defaultImage}
+        src={images?.[0] || imagesMobile?.[0] || defaultImage}
         draggable="false"
         key={id}
         alt="card"

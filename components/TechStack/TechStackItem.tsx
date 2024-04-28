@@ -3,8 +3,14 @@ import Image from "next/image"
 import useStackIcon from "@/hooks/useStackIcon/useStackIcon"
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner"
 import "@/styles/TechStack/TechStackItem.css"
+import TechStackItemTypes from "./types/TechStackItem.interface"
 
-const TechStackItem = ({ prettyLabel, index, location, src }) => {
+const TechStackItem: React.FC<TechStackItemTypes> = ({
+    prettyLabel,
+    index,
+    location,
+    src
+}) => {
     const [hovered, setHovered] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
 

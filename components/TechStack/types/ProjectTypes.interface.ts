@@ -1,9 +1,10 @@
-export interface ProjectStackType {
+interface ProjectStackTypes {
   prettyLabel: string
   src: string
 }
 
-export interface ProjectTypes {
+interface ProjectTypes {
+  id: string
   name: string
   description: string
   detailedDescription: string
@@ -13,6 +14,7 @@ export interface ProjectTypes {
   hosted?: string
   images?: string[]
   imagesMobile?: string[]
-  id: string
-  stack?: ProjectStackType[]
+  stack?: ProjectStackTypes[]
 }
+
+export type { ProjectTypes, ProjectStackTypes }

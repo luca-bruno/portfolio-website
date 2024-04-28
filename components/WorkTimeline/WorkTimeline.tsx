@@ -4,14 +4,15 @@ import React, { useEffect, useState } from "react"
 import WORK_HISTORY_LIST from "../About/data"
 import WorkTimelineList from "./WorkTimelineList"
 import WorkTimelineDetails from "./WorkTimelineDetails"
+import WorkTypes from "./types/WorkTypes.interface"
 
 const WorkTimeline = () => {
-    const [activeWork, setActiveWork] = useState<string>()
+    const [activeWork, setActiveWork] = useState<string>("")
     const [isWorkSelected, setIsWorkSelected] = useState(false)
-    const [activeWorkDetails, setActiveWorkDetails] = useState<typeof WORK_HISTORY_LIST[0]>()
+    const [activeWorkDetails, setActiveWorkDetails] = useState<WorkTypes>()
 
     const resetSelectedWork = () => {
-        setActiveWork(undefined)
+        setActiveWork("")
         setIsWorkSelected(false)
         setActiveWorkDetails(undefined)
     }
@@ -42,7 +43,11 @@ const WorkTimeline = () => {
             />
 
             <WorkTimelineDetails
-                {...{ isWorkSelected, resetSelectedWork, activeWorkDetails }}
+                {...{
+                    isWorkSelected,
+                    resetSelectedWork,
+                    activeWorkDetails
+                }}
             />
         </>
     )

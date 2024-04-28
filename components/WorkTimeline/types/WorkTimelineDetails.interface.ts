@@ -1,9 +1,9 @@
-import WORK_HISTORY_LIST from "@/components/About/data"
+import WorkTypes from "./WorkTypes.interface"
 
 interface WorkTimelineDetailsTypes {
     isWorkSelected: boolean,
     resetSelectedWork: () => void,
-    activeWorkDetails?: typeof WORK_HISTORY_LIST[0]
+    activeWorkDetails?: WorkTypes
 }
 
 export default WorkTimelineDetailsTypes

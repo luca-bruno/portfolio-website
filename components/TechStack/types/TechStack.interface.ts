@@ -1,9 +1,8 @@
-import { ProjectStackType } from "../../../app/api/[types]/ProjectTypes.interface"
-
+import { ProjectStackTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 
 interface TechStackTypes {
     title?: string
-    stack: ProjectStackType[]
+    stack: ProjectStackTypes[]
     location?: string
 }
 

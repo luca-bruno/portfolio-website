@@ -39,7 +39,6 @@ const WorkTimelineList: React.FC<WorkTimelineListTypes> = ({ selectWork, activeW
                             type="button"
                             className="timeline_step"
                             onClick={() => selectWork(id)}
-
                         >
                             <div className="timeline_dot">
                                 <Image

@@ -1,8 +1,10 @@
-import { SlideShowTypes } from "./SlideShow.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 import SlideShowPreviewTypes from "./SlideShowPreview.interface"
 
 interface SlideShowPageDotsTypes {
-  images: SlideShowTypes["images"]
+  isMobileView: boolean
+  images: ProjectTypes["images"]
+  imagesMobile: ProjectTypes["imagesMobile"]
   currentSlide: SlideShowPreviewTypes["currentSlide"]
   setCurrentSlide: SlideShowPreviewTypes["setCurrentSlide"]
 }

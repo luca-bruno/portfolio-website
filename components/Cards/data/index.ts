@@ -14,9 +14,9 @@ import prospectus11 from "@/public/assets/projects/prospectus/prospectus-mobile-
 import prospectus12 from "@/public/assets/projects/prospectus/prospectus-mobile-12.png"
 import prospectus13 from "@/public/assets/projects/prospectus/prospectus-mobile-13.png"
 import portfolio1 from "@/public/assets/projects/portfolio/portfolio-1.png"
-import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 
-const arr: ProjectTypes[] = [
+const PROJECT_LIST: ProjectTypes[] = [
   {
     name: "Trivya",
     description: "Cross-device webapp quiz solution",
@@ -136,4 +136,4 @@ const arr: ProjectTypes[] = [
 const defaultImage =
   "https://highlandcanine.com/wp-content/uploads/2021/01/vizsla-running.jpg"
 
-export { arr, defaultImage }
+export { PROJECT_LIST, defaultImage }

@@ -1,8 +1,8 @@
 import { faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
-import { SlideShowViewToggleTypes } from "./types/SlideShow.interface"
 import "@/styles/SlideShow/SlideShowViewToggle.css"
+import SlideShowViewToggleTypes from "./types/SlideShowViewToggle.interface"
 
 const SlideShowViewToggle: React.FC<SlideShowViewToggleTypes> = ({
   setIsMobileView,

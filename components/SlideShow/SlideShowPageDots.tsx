@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { faCircle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
@@ -28,9 +29,9 @@ const SlideShowPageDots: React.FC<SlideShowPageDotsTypes> = ({
                   ? "sidepanel_slideshow_button_icon_active"
                   : ""
                 }
-                    ${!hasMoreThanOneImage
-                  ? "sidepanel_slideshow_button_icon_hide"
-                  : ""
+                    ${hasMoreThanOneImage
+                  ? ""
+                  : "sidepanel_slideshow_button_icon_hide"
                 }
                     `}
               icon={faCircle}
@@ -52,9 +53,9 @@ const SlideShowPageDots: React.FC<SlideShowPageDotsTypes> = ({
                 ? "sidepanel_slideshow_button_icon_active"
                 : "sidepanel_slideshow_button_icon"
               }
-                    ${!hasMoreThanOneMobileImage
-                ? "sidepanel_slideshow_button_icon_hide"
-                : "sidepanel_slideshow_button_icon"
+                    ${hasMoreThanOneMobileImage
+                ? "sidepanel_slideshow_button_icon"
+                : "sidepanel_slideshow_button_icon_hide"
               }
                     `}
             icon={faCircle}

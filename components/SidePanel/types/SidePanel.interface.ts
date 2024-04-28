@@ -1,4 +1,4 @@
-import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 
 interface SidePanelTypes {
   activeCardDetails?: ProjectTypes

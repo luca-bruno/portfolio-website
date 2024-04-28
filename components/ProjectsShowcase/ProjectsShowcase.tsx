@@ -1,9 +1,9 @@
 "use client"
 
-import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 import React, { useEffect, useState } from "react"
 import Cards from "../Cards/Cards"
-import { arr } from "../Cards/data"
+import { PROJECT_LIST } from "../Cards/data"
 import SidePanel from "../SidePanel/SidePanel"
 
 const ProjectsShowcase = () => {
@@ -11,7 +11,7 @@ const ProjectsShowcase = () => {
     const [activeCardDetails, setActiveCardDetails] = useState<ProjectTypes>()
 
     useEffect(() => {
-        setActiveCardDetails(arr.filter(el => activeCard === el.id)[0])
+        setActiveCardDetails(PROJECT_LIST.filter(el => activeCard === el.id)[0])
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeCard])
 
@@ -21,7 +21,7 @@ const ProjectsShowcase = () => {
                 {...{
                     setActiveCard,
                     activeCard,
-                    arr,
+                    projectList: PROJECT_LIST,
                     setActiveCardDetails
                 }}
             />

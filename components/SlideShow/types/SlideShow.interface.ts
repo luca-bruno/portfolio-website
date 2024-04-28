@@ -1,13 +1,10 @@
-import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
+import { ProjectTypes } from "@/components/TechStack/types/ProjectTypes.interface"
 
 interface SlideShowTypes {
   images?: ProjectTypes["images"]
   imagesMobile?: ProjectTypes["imagesMobile"]
+  fullscreenMode: boolean
+  setFullscreenMode: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-interface SlideShowViewToggleTypes {
-  setIsMobileView: React.Dispatch<React.SetStateAction<boolean>>
-  isMobileView: boolean
-}
-
-export type { SlideShowTypes, SlideShowViewToggleTypes }
+export default SlideShowTypes

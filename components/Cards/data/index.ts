@@ -1,4 +1,4 @@
-import ProjectTypes from "@/app/api/[types]/ProjectTypes.interface"
+/* eslint-disable max-len */
 import trivya from "@/public/assets/projects/trivya/trivya-1.png"
 import prospectus1 from "@/public/assets/projects/prospectus/prospectus-mobile-1.png"
 import prospectus2 from "@/public/assets/projects/prospectus/prospectus-mobile-2.png"
@@ -14,6 +14,7 @@ import prospectus11 from "@/public/assets/projects/prospectus/prospectus-mobile-
 import prospectus12 from "@/public/assets/projects/prospectus/prospectus-mobile-12.png"
 import prospectus13 from "@/public/assets/projects/prospectus/prospectus-mobile-13.png"
 import portfolio1 from "@/public/assets/projects/portfolio/portfolio-1.png"
+import { ProjectTypes } from "@/app/api/[types]/ProjectTypes.interface"
 
 const arr: ProjectTypes[] = [
   {

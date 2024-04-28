@@ -38,6 +38,7 @@
   position: absolute;
   user-select: none;
   object-fit: cover;
+  object-position: center;
 }
 
 .cards_text {
